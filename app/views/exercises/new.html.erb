@@ -1,0 +1,10 @@
+<h1>New Exercise</h1>
+<%= render "form", exercise: @exercise %>
+
+<h2>List of movements</h2>
+
+<ul>
+<% @movements.each do |movement| %>
+    <li><%= movement.name %></li>
+<% end %>
+</ul>

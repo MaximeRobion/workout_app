@@ -1,0 +1,9 @@
+<h1>Workouts</h1>
+
+<% @workouts.each do |workout| %>
+    <%= link_to (workout) do %>
+    <p><%= workout.date.to_fs(:long_ordinal) %> - <%= workout.note %></p>
+    <% end %>
+<% end %>
+
+<button><%= link_to "New Workout", new_workout_path %></button>
