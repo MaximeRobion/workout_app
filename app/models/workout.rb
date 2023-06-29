@@ -1,4 +1,6 @@
 class Workout < ApplicationRecord
+  has_many :exercises, dependent: :destroy
+
   validates :date, presence: true
-  has_many :exercises
+  validates_associated :exercises
 end

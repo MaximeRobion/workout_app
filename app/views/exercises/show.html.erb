@@ -1,2 +1,11 @@
-<%= @exercise.inspect %>
 <h1><%= @movement.name %></h1>
+
+<ul>
+<% @series.each do |serie| %>
+    <li><%= serie.weight%> - <%=serie.repetition%> - <%=serie.created_at%> </li>
+<% end %>
+</ul>
+
+<p><%= link_to "New serie", new_workout_exercise_series_path(@workout, @exercise) %></p>
+
+<%= link_to "Back to my workout", @workout %>

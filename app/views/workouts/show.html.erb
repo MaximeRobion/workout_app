@@ -1,15 +1,17 @@
 <h1><%= @workout.date.to_fs(:long_ordinal) %></h1>
 <p><%= @workout.note %></p>
 
+<h2>Exercises</h2>
 <ul>
-  <li><%= link_to "Edit", edit_workout_path(@workout) %></li>
-  <li><%= link_to "Destroy", workout_path(@workout), data: {
-                    turbo_method: :delete,
-                    turbo_confirm: "Are you sure?"
-                  } %></li>
+<% @exercises.each do |exercise| %>
+  <li><%= link_to Movement.find(exercise.movement_id).name, workout_exercise_path(@workout, exercise) %></li>
+<% end %>
 </ul>
 
-<h2>Exercises</h2>
+<p><%= link_to "New exercise", new_workout_exercise_path(@workout) %></p>
 
-<!-- <%= link_to "New exercise", workout_exercises_path(@workout) %> -->
-<%= link_to "New exercise", new_workout_exercise_path(@workout) %>
+<%= link_to "Edit", edit_workout_path(@workout) %>
+<%= link_to "Destroy", workout_path(@workout), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %>
