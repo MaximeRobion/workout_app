@@ -7,12 +7,14 @@ MVP:
 - While doing a serie, one can see the previous performance on this movement
 
 Todo for MVP
-- [] Add a movement if it doesn't exist yet
-- [] Add series to an exercise
+- [x] Add a movement if it doesn't exist yet
+- [x] Add series to an exercise
 - [] Update, Destroy for the right objects
-- [] CSS
 - [] Navigation
+- [] Everything to simple_form
+- [] CSS
 - [] Turbo it all
+- [] Better routes (no nesting 2 folds)
 - [] Test everything
 - [] User logging
 

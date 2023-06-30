@@ -4,14 +4,22 @@
 <h2>Exercises</h2>
 <ul>
 <% @exercises.each do |exercise| %>
-  <li><%= link_to Movement.find(exercise.movement_id).name, workout_exercise_path(@workout, exercise) %></li>
+  <li><%= link_to Movement.find(exercise.movement_id).name, workout_exercise_path(@workout, exercise) %> - <%= link_to "Destroy",
+                                                                                                                workout_exercise_path(exercise.workout_id, exercise.id),
+                                                                                                                data: {
+                                                                                                                    turbo_method: :delete,
+                                                                                                                    turbo_confirm: "Are you sure?"
+                                                                                                                  } %>
+  </li>
 <% end %>
 </ul>
 
 <p><%= link_to "New exercise", new_workout_exercise_path(@workout) %></p>
 
-<%= link_to "Edit", edit_workout_path(@workout) %>
-<%= link_to "Destroy", workout_path(@workout), data: {
+<p><%= link_to "Edit", edit_workout_path(@workout) %></p>
+<p><%= link_to "Destroy", workout_path(@workout), data: {
                     turbo_method: :delete,
                     turbo_confirm: "Are you sure?"
-                  } %>
+                  } %></p>
+
+<p><%= link_to "See all my workouts", workouts_path %></p>

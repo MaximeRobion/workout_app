@@ -1,0 +1,8 @@
+<h1>Edit Workout</h1>
+
+<%= simple_form_for @serie, url: workout_exercise_series_path do |f| %>
+    <%= f.input :weight %>
+    <%= f.input :repetition %>
+    <%= f.button :submit %>
+<% end %>
+

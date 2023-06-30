@@ -2,10 +2,20 @@
 
 <ul>
 <% @series.each do |serie| %>
-    <li><%= serie.weight%> - <%=serie.repetition%> - <%=serie.created_at%> </li>
+    <li>
+        <%= serie.weight %> kg - <%= pluralize(serie.repetition, 'repetition') %>
+        <%= link_to "Edit", edit_workout_exercise_series_path(@exercise.workout_id, serie.exercise_id, serie) %>
+        <%= link_to "Destroy",
+            workout_exercise_series_path(@exercise.workout_id, serie.exercise_id, serie),
+            data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %>
+    </li>
 <% end %>
 </ul>
 
-<p><%= link_to "New serie", new_workout_exercise_series_path(@workout, @exercise) %></p>
+<h3>Add a new serie</h3>
+<%= render "series/form", serie: @serie %>
 
 <%= link_to "Back to my workout", @workout %>

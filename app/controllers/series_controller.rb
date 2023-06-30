@@ -8,14 +8,13 @@ class SeriesController < ApplicationController
 
   def new
     @serie = @exercise.series.build
-    # @serie = Serie.new
   end
 
   def create
     @serie = @exercise.series.create(serie_params)
 
     if @serie.save
-      redirect_to :action => "show", :id => @exercise
+      redirect_to workout_exercise_path(@workout,@exercise)
     else
       render :new, status: :unprocessable_entity
     end
@@ -23,6 +22,27 @@ class SeriesController < ApplicationController
 
   def show
     @serie = Serie.find(params[:id])
+  end
+
+  def edit
+    @serie = Serie.find(params[:id])
+  end
+
+  def update
+    @serie = Serie.find(params[:id])
+
+    if @serie.update(serie_params)
+      redirect_to workout_exercise_path(@workout,@exercise)
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @serie = Serie.find(params[:id])
+    @serie.destroy
+
+    redirect_to workout_exercise_path(@workout,@exercise), status: :see_other
   end
 
   private
