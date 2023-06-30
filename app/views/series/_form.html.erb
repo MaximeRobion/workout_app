@@ -1,11 +1,5 @@
-<%= form_with model: [@workout, @exercise, @exercise.series.build], url: workout_exercise_series_index_path(@workout, @exercise) do |form| %>
-  <%= form.label :weight %>
-  <%= form.text_field :weight %>
-
-  <%= form.label :repetition %>
-  <%= form.text_field :repetition %>
-
-  <p>
-    <%= form.submit %>
-  </p>
+<%= simple_form_for [@workout, @exercise, @exercise.series.build], url: workout_exercise_series_index_path(@workout, @exercise) do |f| %>
+  <%= f.input :weight %>
+  <%= f.input :repetition %>
+  <%= f.button :submit %>
 <% end %>

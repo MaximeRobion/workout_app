@@ -1,9 +1,16 @@
 <h1><%= @movement.name %></h1>
 
+<% if @previous_exercise_same_movement %>
+    <p>Last performance (<%= local_time_ago(@previous_exercise_same_movement.created_at) %>):</p>
+    <% @last_series.each do |last_serie| %>
+        <%= last_serie.weight %> kg - <%= pluralize(last_serie.repetition, 'rep')%> /
+    <% end %>
+<% end %>
+
 <ul>
 <% @series.each do |serie| %>
     <li>
-        <%= serie.weight %> kg - <%= pluralize(serie.repetition, 'repetition') %>
+        <%= serie.weight %> kg - <%= pluralize(serie.repetition, 'rep') %>
         <%= link_to "Edit", edit_workout_exercise_series_path(@exercise.workout_id, serie.exercise_id, serie) %>
         <%= link_to "Destroy",
             workout_exercise_series_path(@exercise.workout_id, serie.exercise_id, serie),

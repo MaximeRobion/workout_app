@@ -9,7 +9,10 @@ class ExercisesController < ApplicationController
   def show
     @exercise = Exercise.find(params[:id])
     @movement = Movement.find(@exercise.movement_id)
-    @series = Serie.where(:exercise_id => @exercise.id)
+    @series = Serie.where(exercise_id: @exercise.id)
+    @last_exercises = Exercise.where('created_at < ?', @exercise.created_at)
+    @previous_exercise_same_movement = @last_exercises&.where(movement_id: @exercise.movement_id).last
+    @last_series = Serie.where(exercise_id: @previous_exercise_same_movement&.id)
   end
 
   def new
@@ -18,9 +21,12 @@ class ExercisesController < ApplicationController
 
   def create
     @exercise = @workout.exercises.create(exercise_params)
+    logger.debug "New exercise: #{@exercise.attributes.inspect}"
+    logger.debug "Exercise should be valid: #{@exercise.valid?}"
 
     if @exercise.save
-      redirect_to :action => "show", :id => @exercise
+      logger.info "Exercise ##{@exercise.id} created at #{Time.now.utc}"
+      redirect_to workout_exercise_path(@workout, @exercise)
     else
       render :new, status: :unprocessable_entity
     end
@@ -28,8 +34,10 @@ class ExercisesController < ApplicationController
 
   def destroy
     @exercise = Exercise.find(params[:id])
-    @exercise.destroy
+    @series = Serie.where(exercise_id: @exercise.id)
 
+    @exercise.destroy
+    logger.info "Exercise ##{@exercise.id} was deleted and now the user is going to be redirected..."
     redirect_to workout_path(@workout), status: :see_other
   end
 

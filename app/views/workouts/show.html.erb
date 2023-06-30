@@ -1,9 +1,11 @@
-<h1><%= @workout.date.to_fs(:long_ordinal) %></h1>
+<h1><%= local_time(@workout.date, format: '%A %d/%m/%Y %Hh%M') %></h1>
 <p><%= @workout.note %></p>
 
 <h2>Exercises</h2>
 <ul>
+
 <% @exercises.each do |exercise| %>
+  <% if exercise.movement_id %>
   <li><%= link_to Movement.find(exercise.movement_id).name, workout_exercise_path(@workout, exercise) %> - <%= link_to "Destroy",
                                                                                                                 workout_exercise_path(exercise.workout_id, exercise.id),
                                                                                                                 data: {
@@ -11,6 +13,7 @@
                                                                                                                     turbo_confirm: "Are you sure?"
                                                                                                                   } %>
   </li>
+  <% end %>
 <% end %>
 </ul>
 

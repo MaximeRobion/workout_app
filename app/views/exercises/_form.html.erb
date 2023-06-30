@@ -1,10 +1,6 @@
-<%= form_with model: [ @workout, @workout.exercises.build ] do |form| %>
-  <%= form.select :movement_id, Movement.all.collect { |m| [ m.name, m.id ] } %>
-  <p>
-    <%= form.submit %>
-  </p>
+<%= simple_form_for [ @workout, @workout.exercises.build ] do |f| %>
+  <%= f.input :movement_id, collection: Movement.all.map { |m| [m.name, m.id] } %>
+  <%= f.button :submit %>
 <% end %>
-
-
 
 

@@ -9,14 +9,18 @@ MVP:
 Todo for MVP
 - [x] Add a movement if it doesn't exist yet
 - [x] Add series to an exercise
-- [] Update, Destroy for the right objects
-- [] Navigation
-- [] Everything to simple_form
+- [x] Update, Destroy for the right objects
+- [x] Navigation
+- [x] Last of the same serie of the same movement
+- [x] Better handling of local time with local_time gem & timezone config
+- [x] Everything to simple_form
+- [x] Add logs
 - [] CSS
 - [] Turbo it all
+- [] Flash messages
 - [] Better routes (no nesting 2 folds)
 - [] Test everything
-- [] User logging
+- [] Users & Devise gem
 
 Features for the future...
 - SuperSets (Exercise with 2 movements)

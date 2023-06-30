@@ -12,8 +12,11 @@ class SeriesController < ApplicationController
 
   def create
     @serie = @exercise.series.create(serie_params)
+    logger.debug "New serie: #{@exercise.attributes.inspect}"
+    logger.debug "Serie should be valid: #{@exercise.valid?}"
 
     if @serie.save
+      logger.info "Serie ##{@serie.id}) created at #{Time.now.utc}"
       redirect_to workout_exercise_path(@workout,@exercise)
     else
       render :new, status: :unprocessable_entity
@@ -41,7 +44,7 @@ class SeriesController < ApplicationController
   def destroy
     @serie = Serie.find(params[:id])
     @serie.destroy
-
+    logger.info "Serie ##{@serie.id}) deleted at #{Time.now.utc}"
     redirect_to workout_exercise_path(@workout,@exercise), status: :see_other
   end
 

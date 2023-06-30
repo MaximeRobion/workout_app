@@ -1,12 +1,7 @@
+<%= link_to "Back to my workout", workout_path(@exercise.workout_id) %>
+
 <h1>New Exercise</h1>
 <%= render "form", exercise: @exercise %>
 
-<h2>List of movements</h2>
-
-<ul>
-<% @movements.each do |movement| %>
-    <li><%= movement.name %></li>
-<% end %>
-</ul>
-
+<p>Don't find the movement you're looking for?</p>
 <%= link_to "Add a new movement", new_movement_path %>
