@@ -1,4 +1,4 @@
-<%= simple_form_for @movement do |f| %>
-    <%= f.input :name %>
-    <%= f.button :submit %>
+<%= simple_form_for @movement, html: { class: "form movements" } do |f| %>
+    <%= f.input :name, placeholder: "Name your movement", hint: "Need to be unique" %>
+    <%= f.button :submit, class: "btn btn--secondary" %>
 <% end %>

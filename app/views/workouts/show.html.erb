@@ -1,28 +1,30 @@
-<h1><%= local_time(@workout.date, format: '%A %d/%m/%Y %Hh%M') %></h1>
-<p><%= @workout.note %></p>
+<main class="container">
+  <div class="header">
+    <div>
+      <h1><%= local_time(@workout.date, format: '%A %d/%m/%Y %Hh%M') %></h1>
+      <p><%= @workout.note %></p>
+    </div>
+    <div>
+      <%= link_to "delete", workout_path(@workout), data: {turbo_method: :delete,turbo_confirm: "Are you sure?"}, class: "material-symbols-outlined"%>
+      <%= link_to "edit", edit_workout_path(@workout), class: "material-symbols-outlined" %>
+    </div>
+  </div>
 
 <h2>Exercises</h2>
-<ul>
 
 <% @exercises.each do |exercise| %>
   <% if exercise.movement_id %>
-  <li><%= link_to Movement.find(exercise.movement_id).name, workout_exercise_path(@workout, exercise) %> - <%= link_to "Destroy",
-                                                                                                                workout_exercise_path(exercise.workout_id, exercise.id),
-                                                                                                                data: {
-                                                                                                                    turbo_method: :delete,
-                                                                                                                    turbo_confirm: "Are you sure?"
-                                                                                                                  } %>
-  </li>
+    <%= link_to workout_exercise_path(@workout, exercise), class: "workout" do %>
+      <%= Movement.find(exercise.movement_id).name %>
+      <% @series.where(exercise_id: exercise.id).each do |serie| %>
+        <p class="workout_note"><%= serie.weight %> kg - <%= pluralize(serie.repetition, 'rep') %></p>
+      <% end %>
+    <% end %>
   <% end %>
 <% end %>
-</ul>
 
-<p><%= link_to "New exercise", new_workout_exercise_path(@workout) %></p>
+</main>
 
-<p><%= link_to "Edit", edit_workout_path(@workout) %></p>
-<p><%= link_to "Destroy", workout_path(@workout), data: {
-                    turbo_method: :delete,
-                    turbo_confirm: "Are you sure?"
-                  } %></p>
-
-<p><%= link_to "See all my workouts", workouts_path %></p>
+<footer class="footer">
+  <%= link_to "New exercise", new_workout_exercise_path(@workout), class: "btn btn--primary" %>
+</footer>

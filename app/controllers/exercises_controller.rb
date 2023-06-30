@@ -25,8 +25,14 @@ class ExercisesController < ApplicationController
     logger.debug "Exercise should be valid: #{@exercise.valid?}"
 
     if @exercise.save
+      respond_to do |format|
+        format.html {
+          redirect_to workout_exercise_path(@workout, @exercise),
+          notice: "Exercise was successfully created."
+        }
+        # format.turbo_stream { flash.now[:notice] = "Date was successfully created." }
+      end
       logger.info "Exercise ##{@exercise.id} created at #{Time.now.utc}"
-      redirect_to workout_exercise_path(@workout, @exercise)
     else
       render :new, status: :unprocessable_entity
     end

@@ -17,7 +17,13 @@ class SeriesController < ApplicationController
 
     if @serie.save
       logger.info "Serie ##{@serie.id}) created at #{Time.now.utc}"
-      redirect_to workout_exercise_path(@workout,@exercise)
+      respond_to do |format|
+        format.html {
+          redirect_to workout_exercise_path(@workout,@exercise),
+          notice: "Serie was successfully created."
+        }
+        # format.turbo_stream { flash.now[:notice] = "Date was successfully created." }
+      end
     else
       render :new, status: :unprocessable_entity
     end
@@ -35,7 +41,13 @@ class SeriesController < ApplicationController
     @serie = Serie.find(params[:id])
 
     if @serie.update(serie_params)
-      redirect_to workout_exercise_path(@workout,@exercise)
+      respond_to do |format|
+        format.html {
+          redirect_to workout_exercise_path(@workout,@exercise),
+          notice: "Serie was successfully updated."
+        }
+        # format.turbo_stream { flash.now[:notice] = "Date was successfully created." }
+      end
     else
       render :edit, status: :unprocessable_entity
     end

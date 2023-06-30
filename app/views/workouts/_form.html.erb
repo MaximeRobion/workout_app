@@ -1,5 +1,5 @@
-<%= simple_form_for @workout do |f| %>
-    <%= f.input :date %>
-    <%= f.input :note %>
-    <%= f.button :submit %>
+<%= simple_form_for @workout, html: { class: "form" } do |f| %>
+    <%= f.input :date%>
+    <%= f.input :note, input_html: { autofocus: true }, placeholder: "Today's focus..." %>
+    <%= f.button :submit, class: "btn btn--secondary" %>
 <% end %>

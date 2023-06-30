@@ -1,2 +1,18 @@
-<h3>Add a new movement</h3>
-<%= render "form", movement: @movement %>
+<main class="container">
+    <div class="header">
+        <div class="header_heading">
+            <%= link_to 'arrow_back', url_for(:back), class: "material-symbols-outlined" %>
+            <h1>New movement</h1>
+        </div>
+    </div>
+
+    <%= render "form", movement: @movement %>
+
+    <h3>Existing movements</h3>
+    <% @movements.each do |movement| %>
+        <p><%= movement.name %></p>
+    <% end %>
+</main>
+
+
+

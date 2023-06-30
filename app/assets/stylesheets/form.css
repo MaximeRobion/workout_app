@@ -1,0 +1,68 @@
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: var(--space-l);
+}
+
+.form__group {
+    flex: 1;
+}
+
+label {
+    margin-bottom: var(--space-s);
+    display: flex;
+    display: none;
+}
+
+.form input, textarea{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: var(--space-xxs) var(--space-xs);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    outline: none;
+    transition: box-shadow 250ms;
+    margin-bottom: var(--space-xs);
+}
+
+.form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: var(--space-xxs) var(--space-xs);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-m);
+    margin-right: var(--space-s);
+}
+
+.form select#exercise_movement_id {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+.input_group {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    max-width: 100%;
+    justify-content: space-between;
+}
+
+.input_group .input {
+    width: 49%;
+    max-width: 49%;
+}
+
+.form input:focus, textarea:focus {
+    box-shadow: 0 0 0 2px var(--color-glint);
+}
+
+.form input--invalid textarea--invalid {
+    border-color: var(--color-primary);
+}

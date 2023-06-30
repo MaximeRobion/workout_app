@@ -15,12 +15,16 @@ Todo for MVP
 - [x] Better handling of local time with local_time gem & timezone config
 - [x] Everything to simple_form
 - [x] Add logs
-- [] CSS
+- [x] Flash messages
+- [x] CSS (could get some improvements after Turbo)
 - [] Turbo it all
-- [] Flash messages
 - [] Better routes (no nesting 2 folds)
+- [] Update all objects
+- [] Empty states
 - [] Test everything
-- [] Users & Devise gem
+- [] Users & Devise gem > workout & movements belong to user
+- [] Refacto front (css)
+- [] Refacto back (model, helpers, controller)
 
 Features for the future...
 - SuperSets (Exercise with 2 movements)

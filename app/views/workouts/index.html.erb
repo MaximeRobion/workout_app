@@ -1,9 +1,16 @@
-<h1>Workouts</h1>
+<main class="container">
+    <div class="header">
+        <h1>Workouts</h1>
+    </div>
 
-<% @workouts.each do |workout| %>
-    <%= link_to (workout) do %>
-    <p><%= local_time(workout.date, format: '%a %d/%m/%Y') %> - <%= workout.note %></p>
+    <% @workouts.each do |workout| %>
+        <%= link_to (workout), class: "workout" do %>
+            <%= local_time(workout.date, format: '%a %d/%m/%Y')%>
+            <p class="workout_note"><%= workout.note%></p>
+        <% end %>
     <% end %>
-<% end %>
+</main>
+<footer class="footer">
+        <%= link_to "New Workout", new_workout_path, class: "btn btn--primary" %>
+</footer>
 
-<button><%= link_to "New Workout", new_workout_path %></button>

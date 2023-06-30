@@ -1,3 +1,9 @@
-<h1>New Workout</h1>
-
-<%= render "form", workout: @workout %>
+<main class="container">
+    <div class="header">
+        <div class="header_heading">
+            <%= link_to 'arrow_back', url_for(:back), class: "material-symbols-outlined" %>
+            <h1>New workout</h1>
+        </div>
+    </div>
+    <%= render "form", workout: @workout %>
+</main>

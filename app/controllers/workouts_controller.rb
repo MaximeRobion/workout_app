@@ -5,7 +5,9 @@ class WorkoutsController < ApplicationController
 
   def show
     @workout = Workout.find(params[:id])
-    @exercises = @workout.exercises.all
+    @exercises = @workout.exercises
+    @movements = Movement.where(id: @exercises.pluck(:movement_id))
+    @series = Serie.where(exercise_id: @exercises.pluck(:id))
   end
 
   def new
@@ -16,7 +18,13 @@ class WorkoutsController < ApplicationController
     @workout = Workout.new(workout_params)
 
     if @workout.save
-      redirect_to @workout
+      respond_to do |format|
+        format.html {
+          redirect_to @workout,
+          notice: "Exercise was successfully created."
+        }
+        # format.turbo_stream { flash.now[:notice] = "Date was successfully created." }
+      end
     else
       render :new, status: :unprocessable_entity
     end
@@ -30,7 +38,13 @@ class WorkoutsController < ApplicationController
     @workout = Workout.find(params[:id])
 
     if @workout.update(workout_params)
-      redirect_to @workout
+      respond_to do |format|
+        format.html {
+          redirect_to @workout,
+          notice: "Exercise was successfully updated."
+        }
+        # format.turbo_stream { flash.now[:notice] = "Date was successfully created." }
+      end
     else
       render :edit, status: :unprocessable_entity
     end
