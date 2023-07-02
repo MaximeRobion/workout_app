@@ -1,7 +1,7 @@
 <%= simple_form_for [@workout, @exercise, @exercise.series.build], url: workout_exercise_series_index_path(@workout, @exercise), html: { class: "form" } do |f| %>
   <div class="input_group">
-    <%= f.input :weight, placeholder: "weight in kilos" %>
-    <%= f.input :repetition, placeholder: "repetions" %>
+    <%= f.input :weight, placeholder: "Weight in kilos"%>
+    <%= f.input :repetition, placeholder: "Repetitions" %>
   </div>
   <%= f.button :submit, class: "btn btn--secondary" %>
 <% end %>

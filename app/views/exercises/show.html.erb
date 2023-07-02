@@ -10,10 +10,15 @@
     </div>
 
     <% if @previous_exercise_same_movement %>
+        <div class="workout">
         <p>Last performance (<%= local_time_ago(@previous_exercise_same_movement.created_at) %>):</p>
-        <% @last_series.each do |last_serie| %>
-            <%= last_serie.weight %> kg - <%= pluralize(last_serie.repetition, 'rep')%> /
-        <% end %>
+        <div class="workout_note">
+            <% @last_series.each do |last_serie| %>
+                <p><%= last_serie.weight %> kg - <%= pluralize(last_serie.repetition, 'rep')%></p>
+            <% end %>
+        </div>
+
+        </div>
     <% end %>
 
     <% @series.each do |serie| %>
