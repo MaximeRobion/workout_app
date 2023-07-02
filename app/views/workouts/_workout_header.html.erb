@@ -1,0 +1,18 @@
+<div class="header">
+    <div>
+        <h1><%= local_time(@workout.date, format: '%A %d/%m/%Y %Hh%M') %></h1>
+        <p><%= @workout.note %></p>
+    </div>
+    <div>
+      <%# <%= link_to "delete",
+            workout_path(@workout),
+            data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"},
+            class: "material-symbols-outlined"%>
+      <%= link_to "edit",
+            edit_workout_path(@workout),
+            class: "material-symbols-outlined",
+            data: { turbo_frame: dom_id(@workout, "header")}%>
+    </div>
+</div>

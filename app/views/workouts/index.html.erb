@@ -1,16 +1,19 @@
+<%= turbo_stream_from "workouts" %>
 <main class="container">
     <div class="header">
         <h1>Workouts</h1>
     </div>
 
-    <% @workouts.each do |workout| %>
-        <%= link_to (workout), class: "workout" do %>
-            <%= local_time(workout.date, format: '%a %d/%m/%Y')%>
-            <p class="workout_note"><%= workout.note%></p>
-        <% end %>
+    <%= turbo_frame_tag Workout.new %>
+
+    <%= turbo_frame_tag "workouts" do %>
+        <%= render @workouts %>
     <% end %>
 </main>
 <footer class="footer">
-        <%= link_to "New Workout", new_workout_path, class: "btn btn--primary" %>
+        <%= link_to "New Workout",
+            new_workout_path,
+            class: "btn btn--primary",
+            data: { turbo_frame: dom_id(Workout.new) } %>
 </footer>
 

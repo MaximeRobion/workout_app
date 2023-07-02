@@ -39,6 +39,10 @@
     text-align: center;
 }
 
+.workout_inline a {
+    text-align:start;
+}
+
 .workout_actions {
     display: flex;
 }

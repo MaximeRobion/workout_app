@@ -4,6 +4,11 @@
     flex-direction: column;
     justify-content: flex-start;
     gap: var(--space-l);
+    background-color: var(--color-white);
+    padding: var(--space-s);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--space-m);
+    box-shadow: var(--shadow-small);
 }
 
 .form__group {
@@ -26,6 +31,10 @@ label {
     outline: none;
     transition: box-shadow 250ms;
     margin-bottom: var(--space-xs);
+}
+
+.form input[type=submit] {
+    border: none;
 }
 
 .form select {
@@ -65,4 +74,22 @@ label {
 
 .form input--invalid textarea--invalid {
     border-color: var(--color-primary);
+}
+
+.btn_group_inline {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btn_group_inline a{
+    width: 49%;
+    max-width: 49%;
+}
+
+.btn_group_inline input{
+    width: 49%;
+    max-width: 49%;
+    margin-bottom: 0;
 }

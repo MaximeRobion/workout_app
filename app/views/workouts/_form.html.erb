@@ -1,5 +1,8 @@
 <%= simple_form_for @workout, html: { class: "form" } do |f| %>
     <%= f.input :date%>
     <%= f.input :note, input_html: { autofocus: true }, placeholder: "Today's focus..." %>
-    <%= f.button :submit, class: "btn btn--secondary" %>
+    <div class="btn_group_inline">
+        <%= link_to "Cancel", url_for(:back), class: "btn btn--light" %>
+        <%= f.button :submit, class: "btn btn--secondary" %>
+    </div>
 <% end %>

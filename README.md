@@ -17,13 +17,16 @@ Todo for MVP
 - [x] Add logs
 - [x] Flash messages
 - [x] CSS (could get some improvements after Turbo)
-- [] Update and delete movements
+- [x] Update and delete movements
 - [] Turbo it all
+    - [x] Turbo workouts - had to change the UX, delete is now on the index directly (did it bc I didn't understand the complexity behind turbo frames and streams for redirections... careful with this)
+    - [] Turbo movements
+    - [] Turbo exercises
+    - [] Turbo seriess
+- [] Users & Devise gem > workout & movements belong to user
 - [] Better routes (no nesting 2 folds)
-- [] Update all objects
 - [] Empty states
 - [] Test everything
-- [] Users & Devise gem > workout & movements belong to user
 - [] Refacto front (css)
 - [] Refacto back (model, helpers, controller)
 

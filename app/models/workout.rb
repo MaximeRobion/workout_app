@@ -3,4 +3,7 @@ class Workout < ApplicationRecord
 
   validates :date, presence: true
   validates_associated :exercises
+
+  scope :ordered, -> { order(id: :desc) }
+  broadcasts_to ->(workout) { "workouts" }, inserts_by: :prepend
 end

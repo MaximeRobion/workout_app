@@ -1,6 +1,6 @@
 class WorkoutsController < ApplicationController
   def index
-    @workouts = Workout.all
+    @workouts = Workout.ordered
   end
 
   def show
@@ -19,11 +19,8 @@ class WorkoutsController < ApplicationController
 
     if @workout.save
       respond_to do |format|
-        format.html {
-          redirect_to @workout,
-          notice: "Exercise was successfully created."
-        }
-        # format.turbo_stream { flash.now[:notice] = "Date was successfully created." }
+        format.html {redirect_to @workout, notice: "Exercise was successfully created." }
+        format.turbo_stream { flash.now[:notice] = "Exercise was successfully created." }
       end
     else
       render :new, status: :unprocessable_entity
@@ -39,11 +36,8 @@ class WorkoutsController < ApplicationController
 
     if @workout.update(workout_params)
       respond_to do |format|
-        format.html {
-          redirect_to @workout,
-          notice: "Exercise was successfully updated."
-        }
-        # format.turbo_stream { flash.now[:notice] = "Date was successfully created." }
+        format.html { redirect_to @workout, notice: "Exercise was successfully updated." }
+        format.turbo_stream { flash.now[:notice] = "Workout was successfully updated." }
       end
     else
       render :edit, status: :unprocessable_entity
@@ -54,7 +48,10 @@ class WorkoutsController < ApplicationController
     @workout = Workout.find(params[:id])
     @workout.destroy
 
-    redirect_to root_path, status: :see_other
+    respond_to do |format|
+      format.html { redirect_to root_path, notice: "Quote was successfully destroyed." }
+      format.turbo_stream {flash.now[:notice] = "Quote was successfully destroyed."}
+    end
   end
 
   private

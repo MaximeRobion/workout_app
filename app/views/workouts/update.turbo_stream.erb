@@ -1,0 +1,4 @@
+<%= turbo_stream.replace "header_workout_#{@workout.id}",
+  partial: "workout_header",
+  locals: { workout: @workout } %>
+<%= render_turbo_stream_flash_messages %>

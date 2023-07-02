@@ -3,5 +3,7 @@
         <h1>Edit workout</h1>
     </div>
 
-    <%= render "form", workout: @workout %>
+    <%= turbo_frame_tag "header_workout_#{@workout.id}" do %>
+        <%= render "form", workout: @workout %>
+    <% end %>
 </main>
