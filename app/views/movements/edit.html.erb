@@ -1,0 +1,10 @@
+<main class="container">
+    <div class="header">
+        <div class="header_heading">
+            <%= link_to 'arrow_back', url_for(:back), class: "material-symbols-outlined" %>
+            <h1>Edit movement</h1>
+        </div>
+    </div>
+
+    <%= render "form", movement: @movement %>
+</main>

@@ -1,4 +1,11 @@
-<h1>Movements</h1>
+<main class="container">
+<header>
+    <div class="header">
+        <div class="header_heading">
+            <%= link_to 'arrow_back', url_for(:back), class: "material-symbols-outlined" %>
+            <h1>All movement</h1>
+        </div>
+    </div>
 
 <% @movements.each do |movement| %>
     <%= movement.name %></p>
@@ -6,3 +13,4 @@
 
 <button><%= link_to "New Movement", new_movement_path %></button>
 <%= link_to "My Workouts", workouts_path %>
+</main>

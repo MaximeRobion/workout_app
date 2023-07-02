@@ -17,6 +17,7 @@ Todo for MVP
 - [x] Add logs
 - [x] Flash messages
 - [x] CSS (could get some improvements after Turbo)
+- [] Update and delete movements
 - [] Turbo it all
 - [] Better routes (no nesting 2 folds)
 - [] Update all objects
