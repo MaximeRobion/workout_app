@@ -3,5 +3,8 @@
     <%= f.input :weight, placeholder: "Weight in kilos"%>
     <%= f.input :repetition, placeholder: "Repetitions" %>
   </div>
-  <%= f.button :submit, class: "btn btn--secondary" %>
+  <div class="btn_group_inline">
+    <%= link_to "Cancel", url_for(:back), class: "btn btn--light" %>
+    <%= f.button :submit, class: "btn btn--secondary" %>
+  </div>
 <% end %>

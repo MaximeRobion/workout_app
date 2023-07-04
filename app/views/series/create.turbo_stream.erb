@@ -1,0 +1,5 @@
+<%= turbo_stream.update nested_dom_id(@exercise, Serie.new), "" %>
+<%= turbo_stream.append nested_dom_id(@exercise, "series") do %>
+  <%= render @serie, workout: @workout, exercise: @exercise %>
+<% end %>
+<%= render_turbo_stream_flash_messages %>

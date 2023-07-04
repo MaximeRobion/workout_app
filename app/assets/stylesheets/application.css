@@ -27,6 +27,7 @@
    *= require turbo_progress_bar
    *= require visually_hidden
    *= require footer
+  *= require list
  */
 
 

@@ -1,6 +1,11 @@
 <%= simple_form_for [ @workout, @workout.exercises.build ], html: { class: "form" } do |f| %>
   <%= f.input :movement_id, collection: Movement.all.map { |m| [m.name, m.id] }%>
-  <%= f.button :submit, class: "btn btn--secondary" %>
+  <div class="btn_group_inline">
+    <%= link_to "Cancel", url_for(:back), class: "btn btn--light" %>
+    <%= f.button :submit, class: "btn btn--secondary" %>
+  </div>
+
+<p>Don't find the movement you're looking for? <%= link_to "Add a new movement", new_movement_path %></p>
 <% end %>
 
 

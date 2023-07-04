@@ -1,6 +1,7 @@
 class SeriesController < ApplicationController
   before_action :set_exercise
   before_action :set_workout
+  before_action :set_serie, only: [:edit, :update, :destroy]
 
   def index
     @series = Serie.all
@@ -22,7 +23,7 @@ class SeriesController < ApplicationController
           redirect_to workout_exercise_path(@workout,@exercise),
           notice: "Serie was successfully created."
         }
-        # format.turbo_stream { flash.now[:notice] = "Date was successfully created." }
+        format.turbo_stream { flash.now[:notice] = "Date was successfully created." }
       end
     else
       render :new, status: :unprocessable_entity
@@ -34,19 +35,13 @@ class SeriesController < ApplicationController
   end
 
   def edit
-    @serie = Serie.find(params[:id])
   end
 
   def update
-    @serie = Serie.find(params[:id])
-
     if @serie.update(serie_params)
       respond_to do |format|
-        format.html {
-          redirect_to workout_exercise_path(@workout,@exercise),
-          notice: "Serie was successfully updated."
-        }
-        # format.turbo_stream { flash.now[:notice] = "Date was successfully created." }
+        format.html {redirect_to workout_exercise_path(@workout,@exercise),notice: "Serie was successfully updated."}
+        format.turbo_stream { flash.now[:notice] = "Serie was successfully created." }
       end
     else
       render :edit, status: :unprocessable_entity
@@ -54,10 +49,12 @@ class SeriesController < ApplicationController
   end
 
   def destroy
-    @serie = Serie.find(params[:id])
     @serie.destroy
+    respond_to do |format|
+      format.html { redirect_to workout_exercise_path(@workout,@exercise), notice: "Serie was successfully destroyed." }
+      format.turbo_stream {flash.now[:notice] = "Serie was successfully destroyed."}
+    end
     logger.info "Serie ##{@serie.id}) deleted at #{Time.now.utc}"
-    redirect_to workout_exercise_path(@workout,@exercise), status: :see_other
   end
 
   private
@@ -71,5 +68,9 @@ class SeriesController < ApplicationController
 
     def set_workout
       @workout = Workout.find(params[:workout_id])
+    end
+
+    def set_serie
+      @serie = @exercise.series.find(params[:id])
     end
 end

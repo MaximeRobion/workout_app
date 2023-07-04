@@ -6,9 +6,7 @@
         </div>
     </div>
 
-    <%= render "form", exercise: @exercise %>
-
-    <p>Don't find the movement you're looking for?</p>
-    <%= link_to "Add a new movement", new_movement_path %>
-
+    <%= turbo_frame_tag @exercise do %>
+        <%= render "form", exercise: @exercise %>
+    <% end %>
 </main>

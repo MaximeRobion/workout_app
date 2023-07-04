@@ -1,4 +1,6 @@
 class WorkoutsController < ApplicationController
+
+
   def index
     @workouts = Workout.ordered
   end
@@ -49,8 +51,8 @@ class WorkoutsController < ApplicationController
     @workout.destroy
 
     respond_to do |format|
-      format.html { redirect_to root_path, notice: "Quote was successfully destroyed." }
-      format.turbo_stream {flash.now[:notice] = "Quote was successfully destroyed."}
+      format.html { redirect_to root_path, notice: "Workout was successfully destroyed." }
+      format.turbo_stream {flash.now[:notice] = "Workout was successfully destroyed."}
     end
   end
 

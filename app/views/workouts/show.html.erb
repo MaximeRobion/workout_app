@@ -1,23 +1,19 @@
 <main class="container">
-<%= turbo_frame_tag "header_workout_#{@workout.id}" do %>
-    <%= render "workout_header" %>
-<% end %>
-
-<h2>Exercises</h2>
-
-<% @exercises.each do |exercise| %>
-  <% if exercise.movement_id %>
-    <%= link_to workout_exercise_path(@workout, exercise), class: "workout" do %>
-      <%= Movement.find(exercise.movement_id).name %>
-      <% @series.where(exercise_id: exercise.id).each do |serie| %>
-        <p class="workout_note"><%= serie.weight %> kg - <%= pluralize(serie.repetition, 'rep') %></p>
-      <% end %>
-    <% end %>
+  <%= turbo_frame_tag "header_workout_#{@workout.id}" do %>
+      <%= render "workout_header" %>
   <% end %>
-<% end %>
 
+  <h2>Exercises</h2>
+
+  <%= turbo_frame_tag Exercise.new %>
+
+  <%= turbo_frame_tag "exercises" do %>
+    <%= render @exercises, workout: @workout %>
+  <% end %>
 </main>
-
 <footer class="footer">
-  <%= link_to "New exercise", new_workout_exercise_path(@workout), class: "btn btn--primary" %>
+  <%= link_to "New exercise",
+      new_workout_exercise_path(@workout),
+      class: "btn btn--primary",
+      data: { turbo_frame: dom_id(Exercise.new) }%>
 </footer>

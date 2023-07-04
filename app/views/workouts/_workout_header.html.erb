@@ -4,12 +4,6 @@
         <p><%= @workout.note %></p>
     </div>
     <div>
-      <%# <%= link_to "delete",
-            workout_path(@workout),
-            data: {
-                    turbo_method: :delete,
-                    turbo_confirm: "Are you sure?"},
-            class: "material-symbols-outlined"%>
       <%= link_to "edit",
             edit_workout_path(@workout),
             class: "material-symbols-outlined",

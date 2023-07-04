@@ -1,4 +1,4 @@
-.workout {
+.list {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -13,17 +13,17 @@
 }
 
 @media(min-width: 50rem) {
-    .workout {
+    .list {
         padding: var(--space-xs) var(--space-m);
     }
 }
 
-.workout_note {
+.list_note {
     font-size: var(--font-size-s);
     color: var(--color-dark);
 }
 
-.workout_inline {
+.list_inline {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -39,10 +39,17 @@
     text-align: center;
 }
 
-.workout_inline a {
+.list_inline a {
     text-align:start;
 }
 
-.workout_actions {
+.list_actions {
     display: flex;
+}
+
+.list_header {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    justify-content: space-between;
 }

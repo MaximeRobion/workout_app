@@ -22,9 +22,9 @@
     <% end %>
 
     <% @series.each do |serie| %>
-        <div class="workout_inline">
+        <div class="list_inline">
             <p><%= serie.weight %> kg - <%= pluralize(serie.repetition, 'rep') %></p>
-            <div class="workout_actions">
+            <div class="list_actions">
                 <%= link_to "edit", edit_workout_exercise_series_path(@exercise.workout_id, serie.exercise_id, serie), class: "material-symbols-outlined" %>
                 <%= link_to "delete",
                     workout_exercise_series_path(@exercise.workout_id, serie.exercise_id, serie),

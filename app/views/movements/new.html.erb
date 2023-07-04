@@ -10,9 +10,9 @@
 
     <h3>Existing movements</h3>
     <% @movements.each do |movement| %>
-        <div class="workout_inline">
+        <div class="list_inline">
             <p><%= movement.name %></p>
-            <div class="workout_actions">
+            <div class="list_actions">
                 <%= link_to "edit", edit_movement_path(movement), class: "material-symbols-outlined" %>
                 <%= link_to "delete",
                     movement_path(movement),

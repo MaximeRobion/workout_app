@@ -1,9 +1,11 @@
 class ExercisesController < ApplicationController
   before_action :set_workout
   before_action :set_movements
+  before_action :set_exercise, only: [:edit, :update, :destroy]
 
   def index
     @movements
+    @exercises = Exercise.ordered
   end
 
   def show
@@ -30,7 +32,7 @@ class ExercisesController < ApplicationController
           redirect_to workout_exercise_path(@workout, @exercise),
           notice: "Exercise was successfully created."
         }
-        # format.turbo_stream { flash.now[:notice] = "Date was successfully created." }
+        format.turbo_stream { flash.now[:notice] = "Date was successfully created." }
       end
       logger.info "Exercise ##{@exercise.id} created at #{Time.now.utc}"
     else
@@ -39,12 +41,12 @@ class ExercisesController < ApplicationController
   end
 
   def destroy
-    @exercise = Exercise.find(params[:id])
-    @series = Serie.where(exercise_id: @exercise.id)
-
     @exercise.destroy
+    respond_to do |format|
+      format.html { redirect_to workout_path(@workout), notice: "Date was successfully destroyed." }
+      format.turbo_stream { flash.now[:notice] = "Date was successfully destroyed." }
+    end
     logger.info "Exercise ##{@exercise.id} was deleted and now the user is going to be redirected..."
-    redirect_to workout_path(@workout), status: :see_other
   end
 
   private
@@ -54,6 +56,10 @@ class ExercisesController < ApplicationController
 
     def set_movements
       @movements = Movement.all
+    end
+
+    def set_exercise
+      @exercise = @workout.exercises.find(params[:id])
     end
 
     def exercise_params

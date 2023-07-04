@@ -1,0 +1,40 @@
+<%= turbo_frame_tag exercise do %>
+    <% if exercise.movement_id %>
+        <div class="list">
+            <div class="list_header">
+                <%= link_to workout_exercise_path(@workout, exercise) do %>
+                    <%= Movement.find(exercise.movement_id).name %>
+                <% end %>
+
+                <%= turbo_frame_tag dom_id(exercise, :edit) do %>
+                        <%= link_to "delete",
+                            [workout, exercise],
+                            data: {
+                                turbo_method: :delete,
+                                turbo_confirm: "Are you sure?"
+                            },
+                            class: "material-symbols-outlined" %>
+                <% end %>
+            </div>
+            <div class="list_note">
+                <% if @previous_exercise_same_movement %>
+                    <p>Last performance (<%= local_time_ago(@previous_exercise_same_movement.created_at) %>):</p>
+                    <% @last_series.each do |last_serie| %>
+                        <p><%= last_serie.weight %> kg - <%= pluralize(last_serie.repetition, 'rep')%></p>
+                    <% end %>
+                <% end %>
+
+                <%= turbo_frame_tag nested_dom_id(exercise, "series") do %>
+                    <%= render exercise.series, workout: workout, exercise: exercise %>
+                <% end %>
+            </div>
+
+            <%= turbo_frame_tag nested_dom_id(exercise, Serie.new) %>
+
+            <%= link_to "Add serie",
+                    [:new, workout, exercise, :series],
+                    data: { turbo_frame: nested_dom_id(exercise, Serie.new) },
+                    class: "btn btn--light" %>
+        </div>
+    <% end %>
+<% end %>
