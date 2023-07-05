@@ -1,15 +1,19 @@
 <%= turbo_frame_tag serie do %>
-    <p><%= serie.weight %> kg - <%= pluralize(serie.repetition, 'reps') %></p>
     <%= turbo_frame_tag dom_id(serie, :edit) do %>
-        <%= link_to "edit",
-                          [:edit, workout, exercise, serie],
-                          class: "material-symbols-outlined" %>
-        <%= link_to "delete",
-                    [workout, exercise, serie],
-                    data: {
-                            turbo_method: :delete,
-                            turbo_confirm: "Are you sure?"
-                    },
-                    class: "material-symbols-outlined" %>
+            <div class="list_inline">
+            <p><%= serie.weight %> kg - <%= pluralize(serie.repetition, 'reps') %></p>
+            <div class="list_actions">
+            <%= link_to "edit",
+                            [:edit, workout, exercise, serie],
+                            class: "material-symbols-outlined" %>
+            <%= link_to "delete",
+                        [workout, exercise, serie],
+                        data: {
+                                turbo_method: :delete,
+                                turbo_confirm: "Are you sure?"
+                        },
+                        class: "material-symbols-outlined" %>
+            </div>
+            </div>
     <% end %>
 <% end %>

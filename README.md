@@ -19,10 +19,10 @@ Todo for MVP
 - [x] CSS (could get some improvements after Turbo)
 - [x] Update and delete movements
 - [] Turbo it all
-    - [x] Turbo workouts - had to change the UX, delete is now on the index directly (did it bc I didn't understand the complexity behind turbo frames and streams for redirections... careful with this)
+    - [x] Turbo workouts
     - [] Turbo movements
-    - [] Turbo exercises
-    - [] Turbo series ~ update doesn't work
+    - [x] Turbo exercises
+    - [x] Turbo series ~ update doesn't work
     - [] Re-arange css
 - [] Empty states
 - [] Test everything

@@ -2,9 +2,7 @@
     <% if exercise.movement_id %>
         <div class="list">
             <div class="list_header">
-                <%= link_to workout_exercise_path(@workout, exercise) do %>
-                    <%= Movement.find(exercise.movement_id).name %>
-                <% end %>
+                <h3><%= Movement.find(exercise.movement_id).name %></h3>
 
                 <%= turbo_frame_tag dom_id(exercise, :edit) do %>
                         <%= link_to "delete",
@@ -28,7 +26,6 @@
                     <%= render exercise.series, workout: workout, exercise: exercise %>
                 <% end %>
             </div>
-
             <%= turbo_frame_tag nested_dom_id(exercise, Serie.new) %>
 
             <%= link_to "Add serie",

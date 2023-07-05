@@ -1,5 +1,5 @@
 <h1>Edit Workout</h1>
-<%= turbo_frame_tag @serie do %>
+<%= turbo_frame_tag dom_id(@serie, :edit) do %>
     <%= simple_form_for [@workout, @exercise, @serie], html: { class: "form" } do |f| %>
     <div class="input_group">
         <%= f.input :weight, placeholder: "Weight in kilos"%>
