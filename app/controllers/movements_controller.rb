@@ -17,7 +17,7 @@ class MovementsController < ApplicationController
           redirect_to :action => 'index',
           notice: "Movement was successfully created."
         }
-        # format.turbo_stream { flash.now[:notice] = "Date was successfully created." }
+        format.turbo_stream { flash.now[:notice] = "Movement was successfully created." }
       end
     else
       render :new, status: :unprocessable_entity
@@ -37,7 +37,7 @@ class MovementsController < ApplicationController
           redirect_to new_movement_path,
           notice: "Movement was successfully updated."
         }
-        # format.turbo_stream { flash.now[:notice] = "Date was successfully created." }
+        format.turbo_stream { flash.now[:notice] = "Movemenent was successfully updated." }
       end
     else
       render :edit, status: :unprocessable_entity

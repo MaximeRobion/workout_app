@@ -7,8 +7,8 @@
         </div>
     </div>
 
-<% @movements.each do |movement| %>
-    <%= movement.name %></p>
+<%= turbo_frame_tag "movements" do %>
+        <%= render @movements %>
 <% end %>
 
 <button><%= link_to "New Movement", new_movement_path %></button>

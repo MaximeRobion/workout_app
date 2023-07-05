@@ -6,25 +6,9 @@
         </div>
     </div>
 
-    <%= render "form", movement: @movement %>
-
-    <h3>Existing movements</h3>
-    <% @movements.each do |movement| %>
-        <div class="list_inline">
-            <p><%= movement.name %></p>
-            <div class="list_actions">
-                <%= link_to "edit", edit_movement_path(movement), class: "material-symbols-outlined" %>
-                <%= link_to "delete",
-                    movement_path(movement),
-                    data: {
-                        turbo_method: :delete,
-                        turbo_confirm: "Are you sure?"
-                    },
-                    class: "material-symbols-outlined" %>
-            </div>
-        </div>
+    <%= turbo_frame_tag @movement do %>
+        <%= render "form", movement: @movement %>
     <% end %>
-
 </main>
 
 

@@ -10,6 +10,7 @@ class WorkoutsController < ApplicationController
     @exercises = @workout.exercises
     @movements = Movement.where(id: @exercises.pluck(:movement_id))
     @series = Serie.where(exercise_id: @exercises.pluck(:id))
+    @all_movements = Movement.all
   end
 
   def new

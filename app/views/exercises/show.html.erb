@@ -1,11 +1,16 @@
 <main class="container">
     <div class="header">
         <div class="header_heading">
-            <%= link_to 'arrow_back', url_for(:back), class: "material-symbols-outlined" %>
+            <%= link_to 'arrow_back',
+                url_for(:back),
+                class: "material-symbols-outlined" %>
             <h1><%= @movement.name %></h1>
         </div>
         <div>
-            <%= link_to "delete", workout_exercise_path(@exercise.workout_id, @exercise.id), data: {turbo_method: :delete,turbo_confirm: "Are you sure?"}, class: "material-symbols-outlined"%>
+            <%= link_to "delete",
+                workout_exercise_path(@exercise.workout_id, @exercise.id),
+                data: {turbo_method: :delete,turbo_confirm: "Are you sure?"},
+                class: "material-symbols-outlined"%>
         </div>
     </div>
 

@@ -20,16 +20,16 @@ Todo for MVP
 - [x] Update and delete movements
 - [] Turbo it all
     - [x] Turbo workouts
-    - [] Turbo movements
+    - [x] Turbo movements ~ UX is shit, to make better
     - [x] Turbo exercises
-    - [x] Turbo series ~ update doesn't work
-    - [] Re-arange css
+    - [x] Turbo series
+    - [x] Re-arange css
 - [] Empty states
-- [] Test everything
 - [] Users & Devise gem > workout & movements belong to user
+- [] Test everything
 - [] Better routes (no nesting 2 folds)
-- [] Refacto front (css)
-- [] Refacto back (model, helpers, controller)
+- [] Clean front (css)
+- [] Clean back (model, helpers, controller)
 
 Features for the future...
 - SuperSets (Exercise with 2 movements)
