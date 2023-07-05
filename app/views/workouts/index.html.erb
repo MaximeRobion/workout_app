@@ -7,6 +7,7 @@
     <%= turbo_frame_tag Workout.new %>
 
     <%= turbo_frame_tag "workouts" do %>
+        <%= render "empty_state" %>
         <%= render @workouts %>
     <% end %>
 </main>

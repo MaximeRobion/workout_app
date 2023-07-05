@@ -3,13 +3,12 @@
     border: var(--border);
     border-style: dashed;
     text-align: center;
+    margin-bottom: var(--space-s);
 }
 
 .empty-state__text {
-    font-size: var(--font-size-l);
+    font-size: var(--font-size-m);
     color: var(--color-text-header);
-    margin-bottom: var(--space-l);
-    font-weight: bold;
 }
 
 .empty-state--only-child {

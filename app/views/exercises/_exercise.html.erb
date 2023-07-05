@@ -23,16 +23,18 @@
                 <% end %>
 
                 <%= turbo_frame_tag nested_dom_id(exercise, "series") do %>
+                    <%= render "series/empty_state" %>
                     <%= render exercise.series, workout: workout, exercise: exercise %>
                 <% end %>
             </div>
 
             <%= turbo_frame_tag nested_dom_id(exercise, Serie.new) do %>
-                <%= link_to "Add serie",
+            <% end %>
+
+            <%= link_to "Add serie",
                         [:new, workout, exercise, :series],
                         data: { turbo_frame: nested_dom_id(exercise, Serie.new) },
                         class: "btn btn--light" %>
-            <% end %>
         </div>
     <% end %>
 <% end %>
