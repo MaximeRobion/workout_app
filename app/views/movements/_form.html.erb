@@ -1,8 +1,7 @@
-<%= simple_form_for @movement, html: { class: "form movements" } do |f| %>
+<%= simple_form_for @movement, html: { class: "form" } do |f| %>
     <%= f.input :name, placeholder: "Name your movement", hint: "Need to be unique" %>
     <div class="btn_group_inline">
-        <%# link_to cancel to fix  %>
-        <%= link_to "Cancel", url_for(:back), class: "btn btn--light" %>
+        <%= link_to "Cancel", movements_path, class: "btn btn--light" %>
         <%= f.button :submit, class: "btn btn--secondary" %>
     </div>
 <% end %>

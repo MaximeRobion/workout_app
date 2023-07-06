@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_29_072021) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_05_181554) do
   create_table "exercises", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -37,7 +37,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_29_072021) do
   end
 
   create_table "workouts", force: :cascade do |t|
-    t.datetime "date", null: false
+    t.datetime "date", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.text "note"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

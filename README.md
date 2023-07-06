@@ -24,18 +24,18 @@ Todo for MVP
     - [x] Turbo exercises
     - [x] Turbo series
     - [x] Re-arange css
-- [] Empty states
+- [x] Empty states
+- [x] Better UX - figured sometimes less turbo and simple is better...
 - [] Users & Devise gem > workout & movements belong to user
 - [] Test everything
-- [] Better routes (no nesting 2 folds)
+- [] Mobile check for CSS
 - [] Clean front (css)
 - [] Clean back (model, helpers, controller)
 
 Features for the future...
 - SuperSets (Exercise with 2 movements)
 - Notes on the serie / feedback if need to increase or decrease
-- Movements have a picture
+- Movements have a picture and notes
 - Handle KG and LBS
 - Home page with stats
-- Timer
 

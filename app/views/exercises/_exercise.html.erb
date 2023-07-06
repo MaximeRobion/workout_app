@@ -28,8 +28,7 @@
                 <% end %>
             </div>
 
-            <%= turbo_frame_tag nested_dom_id(exercise, Serie.new) do %>
-            <% end %>
+            <%= turbo_frame_tag nested_dom_id(exercise, Serie.new) %>
 
             <%= link_to "Add serie",
                         [:new, workout, exercise, :series],

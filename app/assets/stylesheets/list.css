@@ -3,13 +3,14 @@
     flex-direction: column;
     justify-content: flex-start;
 
-    font-size: var(--font-size-l);
+    font-size: var(--font-size-m);
 
     background-color: var(--color-white);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-small);
 
     margin-bottom: var(--space-m);
+    padding: var(--space-s);
 }
 
 @media(min-width: 50rem) {
@@ -33,11 +34,6 @@
 
     margin-bottom: var(--space-m);
     padding: var(--space-s);
-    text-align: center;
-}
-
-.list_inline a {
-    text-align:start;
 }
 
 .list_actions {
@@ -49,6 +45,8 @@
     width: 100%;
     max-width: 100%;
     justify-content: space-between;
+    border-bottom: var(--border);
+    margin-bottom: var(--space-s);
 }
 
 .list .list_inline {
@@ -63,4 +61,9 @@
     margin-bottom: var(--space-s);
     padding: 0;
     text-align: center;
+}
+
+.list_inline .form {
+    box-shadow: none;
+    padding: 0;
 }

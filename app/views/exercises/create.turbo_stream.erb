@@ -1,7 +1,4 @@
-<%# Step 1: remove the form from the Quotes#index page %>
 <%= turbo_stream.update Exercise.new, "" %>
-
-<%# Step 2: add the date at the right place %>
 <% if previous_date = @exercise.previous_date %>
   <%= turbo_stream.after previous_date do %>
     <%= render @exercise, workout: @workout %>
@@ -11,5 +8,4 @@
     <%= render @exercise, workout: @workout %>
   <% end %>
 <% end %>
-
 <%= render_turbo_stream_flash_messages %>

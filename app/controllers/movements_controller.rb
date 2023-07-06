@@ -1,10 +1,12 @@
 class MovementsController < ApplicationController
+  before_action :set_movement, only: [:edit, :update, :destroy]
+
   def index
-    @movements = Movement.all
+    @movements = Movement.ordered
   end
 
   def new
-    @movements = Movement.all
+    @movements = Movement.ordered
     @movement = Movement.new
   end
 
@@ -25,12 +27,9 @@ class MovementsController < ApplicationController
   end
 
   def edit
-    @movement = Movement.find(params[:id])
   end
 
   def update
-    @movement = Movement.find(params[:id])
-
     if @movement.update(movement_params)
       respond_to do |format|
         format.html {
@@ -45,14 +44,19 @@ class MovementsController < ApplicationController
   end
 
   def destroy
-    @movement = Movement.find(params[:id])
     @movement.destroy
-
-    redirect_to new_movement_path, status: :see_other
+    respond_to do |format|
+      format.html { redirect_to movements_path, notice: "Movement was successfully destroyed." }
+      format.turbo_stream {flash.now[:notice] = "Movement was successfully destroyed."}
+    end
   end
 
   private
     def movement_params
       params.require(:movement).permit(:name)
+    end
+
+    def set_movement
+      @movement = Movement.find(params[:id])
     end
 end

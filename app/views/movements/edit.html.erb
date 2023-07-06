@@ -6,5 +6,7 @@
         </div>
     </div>
 
-    <%= render "form", movement: @movement %>
+    <%= turbo_frame_tag @movement do %>
+        <%= render "form", movement: @movement %>
+    <% end %>
 </main>

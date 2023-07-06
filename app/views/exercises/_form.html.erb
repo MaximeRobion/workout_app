@@ -5,13 +5,5 @@
     <%= f.button :submit, class: "btn btn--secondary" %>
   </div>
 
-  <%= turbo_frame_tag dom_id(Movement.new) do %>
-  <p>
-    Don't find the movement you're looking for?
-    <%= link_to "Add a new movement",
-        new_movement_path,
-        data: { turbo_frame: dom_id(Movement.new) }
-        %>
-  </p>
-  <% end %>
+  <p>Don't find the movement you're looking for? <%= link_to "Add a new movement", movements_path, data: {turbo: false} %></p>
 <% end %>

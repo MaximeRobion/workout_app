@@ -6,6 +6,7 @@ class Exercise < ApplicationRecord
   validates_associated :series
 
   scope :ordered, -> { order(id: :asc) }
+
   def previous_date
     workout.exercises.ordered.where("created_at < ?", created_at).last
   end
