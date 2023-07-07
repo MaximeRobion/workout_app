@@ -2,16 +2,16 @@ class MovementsController < ApplicationController
   before_action :set_movement, only: [:edit, :update, :destroy]
 
   def index
-    @movements = Movement.ordered
+    @movements = current_user.movements.ordered
   end
 
   def new
-    @movements = Movement.ordered
-    @movement = Movement.new
+    @movements = current_user.movements.ordered
+    @movement = current_user.movements.new
   end
 
   def create
-    @movement = Movement.new(movement_params)
+    @movement = current_user.movements.new(movement_params)
 
     if @movement.save
       respond_to do |format|
@@ -57,6 +57,6 @@ class MovementsController < ApplicationController
     end
 
     def set_movement
-      @movement = Movement.find(params[:id])
+      @movement = current_user.movements.find(params[:id])
     end
 end

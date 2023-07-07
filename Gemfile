@@ -50,6 +50,7 @@ gem "bootsnap", require: false
 
 gem 'simple_form'
 gem "local_time"
+gem "devise"
 
 
 group :development, :test do

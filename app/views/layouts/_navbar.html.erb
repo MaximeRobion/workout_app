@@ -1,4 +1,19 @@
 <header class="navbar">
-    <p><%= link_to "My workouts", workouts_path %></p>
-    <p><%= link_to "My movements", movements_path %></p>
+  <% if user_signed_in? %>
+    <div class="navbar__brand">
+        <p><%= link_to "My workouts", workouts_path %></p>
+        <p><%= link_to "My movements", movements_path %></p>
+    </div>
+    <div class="navbar__name">
+      <%= current_user.name %>
+    </div>
+    <%= button_to "Sign out",
+                  destroy_user_session_path,
+                  method: :delete,
+                  class: "btn btn--dark" %>
+  <% else %>
+    <%= link_to "Sign in",
+                new_user_session_path,
+                class: "btn btn--dark navbar__right" %>
+  <% end %>
 </header>

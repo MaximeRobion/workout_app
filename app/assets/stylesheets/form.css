@@ -16,10 +16,6 @@
     flex: 1;
 }
 
-label {
-    display: none;
-}
-
 .form input, textarea{
     display: block;
     width: 100%;

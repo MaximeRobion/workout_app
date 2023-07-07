@@ -26,10 +26,17 @@ Todo for MVP
     - [x] Re-arange css
 - [x] Empty states
 - [x] Better UX - figured sometimes less turbo and simple is better...
-- [] Users & Devise gem > workout & movements belong to user
-- [] Test everything
-- [] Mobile check for CSS
-- [] Clean front (css)
+- [x] Users & Devise gem > workout & movements belong to user
+- [] Test everything:
+    - [] Seeding db
+    - [] Integration tests
+    - [] System tests
+- [] CSS clean-up
+    - [] Form labels
+    - [] Devise views
+    - [] Navbar
+    - [] Delete unused css files
+    - [] Mobile overview
 - [] Clean back (model, helpers, controller)
 
 Features for the future...
