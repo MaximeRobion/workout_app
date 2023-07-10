@@ -67,3 +67,16 @@
     box-shadow: none;
     padding: 0;
 }
+
+.last_performance {
+    display: flex;
+    gap: var(--space-s);
+    border-bottom: var(--border);
+    margin-bottom: var(--space-s);
+    padding-bottom: var(--space-s);
+}
+
+.last_performance ul li {
+    display: inline-flex;
+    padding: 0 var(--space-s);
+}

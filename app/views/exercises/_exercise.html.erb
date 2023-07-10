@@ -15,13 +15,7 @@
                 <% end %>
             </div>
             <div class="list_note">
-                <% if @previous_exercise_same_movement %>
-                    <p>Last performance (<%= local_time_ago(@previous_exercise_same_movement.created_at) %>):</p>
-                    <% @last_series.each do |last_serie| %>
-                        <p><%= last_serie.weight %> kg - <%= pluralize(last_serie.repetition, 'rep')%></p>
-                    <% end %>
-                <% end %>
-
+                <%= render "exercises/last_performance", exercise: exercise %>
                 <%= turbo_frame_tag nested_dom_id(exercise, "series") do %>
                     <%= render "series/empty_state" %>
                     <%= render exercise.series, workout: workout, exercise: exercise %>
