@@ -41,7 +41,8 @@ Todo for MVP
     - [x] Devise views
 - [x] Form errors handling
 - [] "On each side" vs "Total" weight indicator
-- [] SuperSets (Exercise with 2 movements)
+- [] SuperSets (1 exercise with 2 movements)
+- [] Push to prod
 
 Tech todo
 - [] Test last performance
@@ -55,5 +56,3 @@ Features for the future...
 - Notes on the serie / feedback if need to increase or decrease
 - Movements have a picture and notes
 - Handle KG and LBS
-
-
