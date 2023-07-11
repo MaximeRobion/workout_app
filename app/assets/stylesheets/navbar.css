@@ -7,19 +7,21 @@
     background-color: var(--color-white);
 }
 
-.navbar__brand {
-    font-weight: bold;
-    font-size: var(--font-size-xl);
-    color: var(--color-text-header);
+.navbar_nav {
+    display: flex;
+    gap: var(--space-s);
 }
 
-.navbar__name {
-    font-weight: bold;
-    margin-left: auto;
-    margin-right: var(--space-s);
-    color: var(--color-text-header);
+.navbar_nav li {
+    display: inline-flex;
 }
 
-.navbar__right {
+.navbar_username {
     margin-left: auto;
+    margin-right: var(--space-xs);
+}
+
+.navbar_right {
+    margin-left: auto;
+    width: 150px;
 }

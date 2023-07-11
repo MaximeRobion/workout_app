@@ -76,7 +76,7 @@
 
 .material-symbols-outlined {
   display: flex;
-  padding: var(--space-xxs) var(--space-m);
+  padding: var(--space-xs);
   border-radius: var(--border-radius);
   background-origin: border-box;
   background-color: transparent;

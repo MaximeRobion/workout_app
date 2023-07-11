@@ -32,21 +32,22 @@ Todo for MVP
     - [] Integration tests
     - [] System tests
 - [] CSS clean-up
-    - [] Form labels
+    - [x] Form labels
+    - [x] Navbar
+    - [x] Delete unused css files
+    - [x] Homepage > removed it
+    - [x] Mobile overview
     - [] Devise views
-    - [] Navbar
-    - [] Delete unused css files
-    - [] Mobile overview
-    - [] Homepage
-- [] Clean back (model, helpers, controller)
+- [x] Form errors handling
 - [] "On each side" vs "Total" weight indicator
 - [] SuperSets (Exercise with 2 movements)
-- [] Movement name > lower and capitalize
+- [] "you should charge up" algorithm on last_performance: all reps > 10, and total superior from 2 last times
+- [] Statistics
 
 Features for the future...
 - SuperSets (Exercise with 2 movements)
 - Notes on the serie / feedback if need to increase or decrease
 - Movements have a picture and notes
 - Handle KG and LBS
-- Statistics
+
 

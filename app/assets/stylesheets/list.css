@@ -80,3 +80,9 @@
     display: inline-flex;
     padding: 0 var(--space-s);
 }
+
+label {
+    display: flex;
+    margin-bottom: var(--space-xs);
+    gap: var(--space-xs);
+}

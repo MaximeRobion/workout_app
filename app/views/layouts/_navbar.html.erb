@@ -1,19 +1,19 @@
 <header class="navbar">
   <% if user_signed_in? %>
-    <div class="navbar__brand">
-        <p><%= link_to "My workouts", workouts_path %></p>
-        <p><%= link_to "My movements", movements_path %></p>
-    </div>
-    <div class="navbar__name">
+    <ul class="navbar_nav">
+        <li><%= link_to "Workouts", workouts_path %></li>
+        <li><%= link_to "Movements", movements_path %></li>
+    </ul>
+    <div class="navbar_username">
       <%= current_user.name %>
     </div>
-    <%= button_to "Sign out",
+    <%= button_to "logout",
                   destroy_user_session_path,
                   method: :delete,
-                  class: "btn btn--dark" %>
+                  class: "material-symbols-outlined" %>
   <% else %>
     <%= link_to "Sign in",
                 new_user_session_path,
-                class: "btn btn--dark navbar__right" %>
+                class: "btn btn--dark navbar_right" %>
   <% end %>
 </header>

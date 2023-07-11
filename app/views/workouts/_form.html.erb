@@ -1,4 +1,5 @@
 <%= simple_form_for @workout, html: { class: "form" } do |f| %>
+    <%= form_error_notification(@workout) %>
     <%= f.input :date %>
     <%= f.input :note, input_html: { autofocus: true }, placeholder: "Today's focus..." %>
     <div class="btn_group_inline">
