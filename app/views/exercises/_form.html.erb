@@ -2,8 +2,8 @@
   <%= form_error_notification(@exercise) %>
   <%= f.input :movement_id, collection: Movement.all.map { |m| [m.name, m.id] }%>
   <div class="btn_group_inline">
-    <%= link_to "Cancel", url_for(:back), class: "btn btn--light" %>
-    <%= f.button :submit, class: "btn btn--secondary" %>
+    <%= link_to "Cancel", url_for(:back), class: "btn btn_light" %>
+    <%= f.button :submit, class: "btn btn_secondary" %>
   </div>
 
   <p>Don't find the movement you're looking for? <%= link_to "Add a new movement", movements_path, data: {turbo: false} %></p>

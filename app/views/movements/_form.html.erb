@@ -2,7 +2,7 @@
     <%= form_error_notification(@movement) %>
     <%= f.input :name, placeholder: "Name your movement", hint: "Need to be unique" %>
     <div class="btn_group_inline">
-        <%= link_to "Cancel", movements_path, class: "btn btn--light" %>
-        <%= f.button :submit, class: "btn btn--secondary" %>
+        <%= link_to "Cancel", movements_path, class: "btn btn_light" %>
+        <%= f.button :submit, class: "btn btn_secondary" %>
     </div>
 <% end %>

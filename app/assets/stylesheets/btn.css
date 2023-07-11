@@ -22,55 +22,55 @@
   transition: filter 250ms, color 200ms;
 }
 
-.btn--primary {
+.btn_primary {
   color: var(--color-white);
   background-image: linear-gradient(to right, var(--color-primary), var(--color-primary-rotate));
 }
 
-.btn--primary:hover,
-.btn--primary:focus,
-.btn--primary:focus-within,
-.btn--primary:active {
+.btn_primary:hover,
+.btn_primary:focus,
+.btn_primary:focus-within,
+.btn_primary:active {
   color: var(--color-white);
   filter: saturate(1.4) brightness(115%);
 }
 
-.btn--secondary {
+.btn_secondary {
   color: var(--color-white);
   background-image: linear-gradient(to right, var(--color-secondary), var(--color-secondary-rotate));
 }
 
-.btn--secondary:hover,
-.btn--secondary:focus,
-.btn--secondary:focus-within,
-.btn--secondary:active {
+.btn_secondary:hover,
+.btn_secondary:focus,
+.btn_secondary:focus-within,
+.btn_secondary:active {
   color: var(--color-white);
   filter: saturate(1.2) brightness(110%);
 }
 
-.btn--light {
+.btn_light {
   color: var(--color-dark);
   background-color: var(--color-light);
 }
 
-.btn--light:hover,
-.btn--light:focus,
-.btn--light:focus-within,
-.btn--light:active {
+.btn_light:hover,
+.btn_light:focus,
+.btn_light:focus-within,
+.btn_light:active {
   color: var(--color-dark);
   filter: brightness(92%);
 }
 
-.btn--dark {
+.btn_dark {
   color: var(--color-white);
   border-color: var(--color-dark);
   background-color: var(--color-dark);
 }
 
-.btn--dark:hover,
-.btn--dark:focus,
-.btn--dark:focus-within,
-.btn--dark:active {
+.btn_dark:hover,
+.btn_dark:focus,
+.btn_dark:focus-within,
+.btn_dark:active {
     color: var(--color-white);
 }
 

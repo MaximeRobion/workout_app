@@ -16,7 +16,7 @@
     display: block;
     width: 100%;
     max-width: 100%;
-    padding: var(--space-xxs) var(--space-xs);
+    padding: var(--space-xs);
     border: var(--border);
     border-radius: var(--border-radius);
     outline: none;
@@ -32,7 +32,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    padding: var(--space-xxs) var(--space-xs);
+    padding: var(--space-xs);
     border: var(--border);
     border-radius: var(--border-radius);
     font-size: var(--font-size-m);
@@ -83,4 +83,21 @@
     width: 49%;
     max-width: 49%;
     margin-bottom: 0;
+}
+
+.form_actions_devise {
+    margin: var(--space-s) 0;
+}
+
+.hint {
+    font-size: var(--font-size-s);
+    padding: 0 var(--space-xs);
+}
+
+.field_with_hint input {
+    margin-bottom: 0;
+}
+
+.field_with_hint {
+    margin-bottom: var(--space-xs);
 }
