@@ -33,4 +33,18 @@ class WorkoutsTest < ApplicationSystemTestCase
 
     assert_no_text @workout.date.strftime('%A %d/%m/%Y')
   end
+
+  test "Updating a workout on show page" do
+    visit workouts_path
+    click_link @workout.date.strftime('%A %d/%m/%Y')
+    assert_selector "h1", text: @workout.date.strftime('%A %d/%m/%Y %Hh%M')
+
+    click_on "edit", match: :first
+    fill_in "Date", with: workouts(:last_week).date
+    fill_in "Note", with: workouts(:last_week).note
+    click_on "Update Workout"
+
+    assert_text "h1", text: workouts(:last_week).date.strftime('%A %d/%m/%Y %Hh%M')
+    assert_text workouts(:last_week).note
+  end
 end
