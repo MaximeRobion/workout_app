@@ -1,7 +1,7 @@
 <%= simple_form_for @workout, html: { class: "form" } do |f| %>
     <%= form_error_notification(@workout) %>
-    <%= f.input :date %>
-    <%= f.input :note, input_html: { autofocus: true }, placeholder: "Today's focus..." %>
+    <%= f.input :date, html5: true, input_html: { autofocus: true } %>
+    <%= f.input :note %>
     <div class="btn_group_inline">
         <%= link_to "Cancel", url_for(:back), class: "btn btn--light" %>
         <%= f.button :submit, class: "btn btn--secondary" %>

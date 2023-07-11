@@ -12,11 +12,7 @@
     width: 100%;
 }
 
-.form__group {
-    flex: 1;
-}
-
-.form input, textarea{
+.form_input, textarea{
     display: block;
     width: 100%;
     max-width: 100%;
@@ -63,11 +59,11 @@
     max-width: 49%;
 }
 
-.form input:focus, textarea:focus {
+.form_input:focus, textarea:focus {
     box-shadow: 0 0 0 2px var(--color-glint);
 }
 
-.form input--invalid textarea--invalid {
+.form_input--invalid textarea--invalid {
     border-color: var(--color-primary);
 }
 

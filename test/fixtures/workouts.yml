@@ -1,9 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  date: 2023-06-28 12:17:39
-  note: MyText
+today:
+  date: <%= Date.current %>
+  note: Fullbody, without breakfast
+  user: john
 
-two:
-  date: 2023-06-28 12:17:39
-  note: MyText
+last_week:
+  date: <%= Date.current - 1.week %>
+  note: Legs session with Jane
+  user: john

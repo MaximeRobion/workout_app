@@ -26,7 +26,8 @@
    *= require empty_state
    *= require turbo_progress_bar
    *= require footer
-  *= require list
+   *= require list
+   *= require visually_hidden
  */
 
 
