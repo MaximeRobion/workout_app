@@ -18,7 +18,7 @@ Todo for MVP
 - [x] Flash messages
 - [x] CSS (could get some improvements after Turbo)
 - [x] Update and delete movements
-- [] Turbo it all
+- [x] Turbo it all
     - [x] Turbo workouts
     - [x] Turbo movements ~ UX is shit, to make better
     - [x] Turbo exercises
@@ -27,10 +27,11 @@ Todo for MVP
 - [x] Empty states
 - [x] Better UX - figured sometimes less turbo and simple is better...
 - [x] Users & Devise gem > workout & movements belong to user
-- [] Test everything:
-    - [] Seeding db
-    - [] Integration tests
-    - [] System tests
+- [] Tests:
+    - [x] Fixtures and system test for workouts
+    - [] Fixtures and system test for movements
+    - [] Fixtures and system test for exercises
+    - [] Fixtures and system test for series
 - [] CSS clean-up
     - [x] Form labels
     - [x] Navbar
