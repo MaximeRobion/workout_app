@@ -32,13 +32,13 @@ Todo for MVP
     - [] Fixtures and system test for movements
     - [] Fixtures and system test for exercises
     - [] Fixtures and system test for series
-- [] CSS clean-up
+- [x] CSS clean-up
     - [x] Form labels
     - [x] Navbar
     - [x] Delete unused css files
     - [x] Homepage > removed it
     - [x] Mobile overview
-    - [] Devise views
+    - [x] Devise views
 - [x] Form errors handling
 - [] "On each side" vs "Total" weight indicator
 - [] SuperSets (Exercise with 2 movements)

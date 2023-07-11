@@ -10,11 +10,11 @@ class WorkoutsTest < ApplicationSystemTestCase
     visit workouts_path
     assert_selector "h1", text: "Workouts"
     click_on "New workout"
-    fill_in "Date", with: Time.now
-    fill_in "Note", with: "Fullbody, didn't eat breakfast"
+    fill_in "Date", with: workouts(:today).date
+    fill_in "Note", with: workouts(:today).note
     click_on "Create Workout"
     assert_selector "h1", text: "Workouts"
-    assert_text "Fullbody, didn't eat breakfast"
+    assert_text workouts(:today).note
   end
 
   test "Showing a workout" do
