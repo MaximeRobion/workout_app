@@ -44,7 +44,7 @@ class WorkoutsTest < ApplicationSystemTestCase
     fill_in "Note", with: workouts(:last_week).note
     click_on "Update Workout"
 
-    assert_text "h1", text: workouts(:last_week).date.strftime('%A %d/%m/%Y %Hh%M')
+    assert_selector "h1", text: workouts(:last_week).date.strftime('%A %d/%m/%Y %Hh%M')
     assert_text workouts(:last_week).note
   end
 end

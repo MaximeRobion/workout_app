@@ -3,14 +3,14 @@
 # first:
 #   weight: 27.5
 #   repetition: 10
-#   exercise: squat
+#   exercise: today_squat
 
 # second:
 #   weight: 25
 #   repetition: 9
-#   exercise: squat
+#   exercise: today_squat
 
 # third:
 #   weight: 20
 #   repetition: 10
-#   exercise: squat
+#   exercise: today_squat

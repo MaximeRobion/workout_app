@@ -27,11 +27,11 @@ Todo for MVP
 - [x] Empty states
 - [x] Better UX - figured sometimes less turbo and simple is better...
 - [x] Users & Devise gem > workout & movements belong to user
-- [] Tests:
+- [] First wave of tests:
     - [x] Fixtures and system test for workouts
-    - [] Fixtures and system test for movements
-    - [] Fixtures and system test for exercises
-    - [] Fixtures and system test for series
+    - [x] Fixtures and system test for movements
+    - [x] Fixtures and system test for exercises
+    - [] Fixtures and system test for series > pushing it back because association problem...
 - [x] CSS clean-up
     - [x] Form labels
     - [x] Navbar
@@ -42,11 +42,16 @@ Todo for MVP
 - [x] Form errors handling
 - [] "On each side" vs "Total" weight indicator
 - [] SuperSets (Exercise with 2 movements)
+
+Tech todo
+- [] Test last performance
+- [] Test series (fixtures and system test)
+
+v1
 - [] "you should charge up" algorithm on last_performance: all reps > 10, and total superior from 2 last times
 - [] Statistics
 
 Features for the future...
-- SuperSets (Exercise with 2 movements)
 - Notes on the serie / feedback if need to increase or decrease
 - Movements have a picture and notes
 - Handle KG and LBS
