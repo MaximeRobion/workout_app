@@ -40,7 +40,7 @@ Todo for MVP
     - [x] Mobile overview
     - [x] Devise views
 - [x] Form errors handling
-- [] "On each side" vs "Total" weight indicator
+- [x] "On each side" vs "Total" weight indicator ~ https://github.com/MaximeRobion/workout_app/pull/2
 - [] SuperSets (1 exercise with 2 movements)
 - [] Push to prod
 
