@@ -63,6 +63,6 @@ class ExercisesController < ApplicationController
     end
 
     def exercise_params
-      params.require(:exercise).permit(:movement_id)
+      params.require(:exercise).permit(:movement_id, :movement_baseline_weight)
     end
 end

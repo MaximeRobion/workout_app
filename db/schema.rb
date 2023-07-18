@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_18_162941) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_18_184724) do
   create_table "exercises", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "workout_id", null: false
     t.integer "movement_id"
+    t.decimal "movement_baseline_weight", precision: 10, scale: 2, null: false
     t.index ["movement_id"], name: "index_exercises_on_movement_id"
     t.index ["workout_id"], name: "index_exercises_on_workout_id"
   end
@@ -37,7 +38,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_18_162941) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "is_total_weight", default: false, null: false
-    t.decimal "movement_baseline_weight", precision: 10, scale: 2, default: "0.0", null: false
     t.index ["exercise_id"], name: "index_series_on_exercise_id"
   end
 
