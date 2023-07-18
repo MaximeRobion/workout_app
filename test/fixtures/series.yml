@@ -1,16 +1,16 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-# first:
-#   weight: 27.5
-#   repetition: 10
-#   exercise: today_squat
+first:
+  weight: 27.5
+  repetition: 10
+  exercise: today_squat
 
-# second:
-#   weight: 25
-#   repetition: 9
-#   exercise: today_squat
+second:
+  weight: 25
+  repetition: 9
+  exercise: today_squat
 
-# third:
-#   weight: 20
-#   repetition: 10
-#   exercise: today_squat
+third:
+  weight: 20
+  repetition: 10
+  exercise: today_squat
