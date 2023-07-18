@@ -1,10 +1,12 @@
 <%= simple_form_for [@workout, @exercise, @exercise.series.build], url: workout_exercise_series_index_path(@workout, @exercise), html: { class: "form" } do |f| %>
   <%= form_error_notification(@serie) %>
-    <div class="weight_inputs">
-      <%= f.input :weight, placeholder: "Weight" %>
-      <%= f.input :is_total_weight, collection: [["in total", true], ["on each side", false]] %>
+    <div class="input_group">
+      <div class="weight_inputs">
+        <%= f.input :weight, placeholder: "Weight" %>
+        <%= f.input :is_total_weight, collection: [["in total", true], ["on each side", false]], include_blank: false, include_hidden: false %>
+      </div>
+      <%= f.input :repetition, placeholder: "Reps" %>
     </div>
-    <%= f.input :repetition, placeholder: "Reps" %>
   <div class="btn_group_inline">
     <%= link_to "Cancel", url_for(:back), class: "btn btn_light" %>
     <%= f.button :submit, class: "btn btn_secondary" %>

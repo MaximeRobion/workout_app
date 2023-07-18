@@ -103,16 +103,12 @@
 }
 
 .numeric {
-    width: 16ch;
+    min-width: 8ch;
     max-width: 16ch;
 }
-
 
 .weight_inputs {
     display: flex;
     flex-direction: row;
-    /* width: 100%;
-    max-width: 100%; */
-    justify-content: space-between;
-    text-align: center;
+    gap: var(--space-xs);
 }
