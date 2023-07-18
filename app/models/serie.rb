@@ -3,4 +3,5 @@ class Serie < ApplicationRecord
 
   validates :weight, presence: true
   validates :repetition, presence: true
+  validates :is_total_weight, presence: true
 end

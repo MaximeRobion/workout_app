@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_07_082440) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_18_142013) do
   create_table "exercises", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -35,6 +35,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_07_082440) do
     t.integer "exercise_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "is_total_weight", default: false, null: false
     t.index ["exercise_id"], name: "index_series_on_exercise_id"
   end
 
