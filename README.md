@@ -1,12 +1,12 @@
 # What I'm working on
 
-MVP:
+## MVP
 - Each workout has a date and a note
 - In each workout, there are many exercises
 - Exercises are a compilation of a movement and a serie (weights and reps)
 - While doing a serie, one can see the previous performance on this movement
 
-Todo for MVP
+### Todo for MVP
 - [x] Add a movement if it doesn't exist yet
 - [x] Add series to an exercise
 - [x] Update, Destroy for the right objects
@@ -44,16 +44,16 @@ Todo for MVP
 - [ ] SuperSets (1 exercise with 2 movements)
 - [ ] Push to prod
 
-Tech todo
+### Tech todo
 - [ ] Test last performance
 - [ ] Test series (fixtures and system test)
 - [ ] Use form partial for series edit
 
-v1
+## v1
 - [ ] "you should charge up" algorithm on last_performance: all reps > 10, and total superior from 2 last times
 - [ ] Statistics
 
-Features for the future...
+## Features for the future...
 - Notes on the serie / feedback if need to increase or decrease
 - Movements have a picture and notes
 - Handle KG and LBS
