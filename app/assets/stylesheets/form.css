@@ -101,3 +101,18 @@
 .field_with_hint {
     margin-bottom: var(--space-xs);
 }
+
+.numeric {
+    width: 10ch;
+    max-width: 10ch;
+}
+
+
+.weight_inputs {
+    display: flex;
+    flex-direction: row;
+    /* width: 100%;
+    max-width: 100%; */
+    justify-content: space-between;
+    text-align: center;
+}
