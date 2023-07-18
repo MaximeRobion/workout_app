@@ -27,11 +27,11 @@ Todo for MVP
 - [x] Empty states
 - [x] Better UX - figured sometimes less turbo and simple is better...
 - [x] Users & Devise gem > workout & movements belong to user
-- [] First wave of tests:
+- [ ] First wave of tests:
     - [x] Fixtures and system test for workouts
     - [x] Fixtures and system test for movements
     - [x] Fixtures and system test for exercises
-    - [] Fixtures and system test for series > pushing it back because association problem...
+    - [ ] Fixtures and system test for series > https://github.com/MaximeRobion/workout_app/pull/1
 - [x] CSS clean-up
     - [x] Form labels
     - [x] Navbar
@@ -41,17 +41,17 @@ Todo for MVP
     - [x] Devise views
 - [x] Form errors handling
 - [x] "On each side" vs "Total" weight indicator ~ https://github.com/MaximeRobion/workout_app/pull/2
-- [] SuperSets (1 exercise with 2 movements)
-- [] Push to prod
+- [ ] SuperSets (1 exercise with 2 movements)
+- [ ] Push to prod
 
 Tech todo
-- [] Test last performance
-- [] Test series (fixtures and system test)
-- [] Use form partial for series edit
+- [ ] Test last performance
+- [ ] Test series (fixtures and system test)
+- [ ] Use form partial for series edit
 
 v1
-- [] "you should charge up" algorithm on last_performance: all reps > 10, and total superior from 2 last times
-- [] Statistics
+- [ ] "you should charge up" algorithm on last_performance: all reps > 10, and total superior from 2 last times
+- [ ] Statistics
 
 Features for the future...
 - Notes on the serie / feedback if need to increase or decrease
