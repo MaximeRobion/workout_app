@@ -40,7 +40,7 @@ class SeriesController < ApplicationController
   def update
     if @serie.update(serie_params)
       respond_to do |format|
-        format.html {redirect_to workout_exercise_path(@workout,@exercise),notice: "Serie was successfully updated."}
+        format.html {redirect_to workout_exercise_path(@workout, @exercise),notice: "Serie was successfully updated."}
         format.turbo_stream { flash.now[:notice] = "Serie was successfully created." }
       end
     else
@@ -59,7 +59,7 @@ class SeriesController < ApplicationController
 
   private
     def serie_params
-      params.require(:serie).permit(:weight, :repetition)
+      params.require(:serie).permit(:weight, :repetition, :is_total_weight)
     end
 
     def set_exercise

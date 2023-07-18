@@ -1,6 +1,7 @@
 <%= simple_form_for [ @workout, @workout.exercises.build ], html: { class: "form" } do |f| %>
   <%= form_error_notification(@exercise) %>
   <%= f.input :movement_id, collection: Movement.all.map { |m| [m.name, m.id] }%>
+  <%= f.input :movement_baseline_weight, placeholder: "Baseline weight" %>
   <div class="btn_group_inline">
     <%= link_to "Cancel", url_for(:back), class: "btn btn_light" %>
     <%= f.button :submit, class: "btn btn_secondary" %>

@@ -47,6 +47,7 @@
     justify-content: space-between;
     border-bottom: var(--border);
     margin-bottom: var(--space-s);
+    padding-bottom: var(--space-s);
 }
 
 .list .list_inline {

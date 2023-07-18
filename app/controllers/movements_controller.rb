@@ -53,7 +53,7 @@ class MovementsController < ApplicationController
 
   private
     def movement_params
-      params.require(:movement).permit(:name)
+      params.require(:movement).permit(:name, :equipment_type)
     end
 
     def set_movement

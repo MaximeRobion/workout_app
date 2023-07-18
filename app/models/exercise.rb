@@ -4,6 +4,7 @@ class Exercise < ApplicationRecord
   has_many :series, class_name: 'Serie', dependent: :destroy
 
   validates_associated :series
+  validates :movement_baseline_weight, presence: true
 
   scope :ordered, -> { order(id: :asc) }
 
