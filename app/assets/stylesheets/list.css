@@ -87,3 +87,8 @@ label {
     margin-bottom: var(--space-xs);
     gap: var(--space-xs);
 }
+
+.small_text {
+    font-size: var(--font-size-s);
+    color: var(--color-header);
+}

@@ -4,7 +4,11 @@
             <div class="list_header">
                 <div>
                     <h3><%= exercise.movement.name %></h3>
-                    <p><%= exercise.movement.equipment_type.capitalize %> - Baseline weight: <%= exercise.movement_baseline_weight %> kg</p>
+                    <p><%= exercise.movement.equipment_type.capitalize %>
+                        <% if exercise.movement_baseline_weight.positive? %>
+                            <%= "- #{exercise.movement_baseline_weight} kg" %>
+                        <% end %>
+                    </p>
                 </div>
                 <%= turbo_frame_tag dom_id(exercise, :edit) do %>
                         <%= link_to "delete",

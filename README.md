@@ -41,6 +41,7 @@
     - [x] Devise views
 - [x] Form errors handling
 - [x] "On each side" vs "Total" weight indicator ~ https://github.com/MaximeRobion/workout_app/pull/2
+- [ ] Handle KG and LBS
 - [ ] SuperSets (1 exercise with 2 movements)
 - [ ] Push to prod
 
@@ -54,6 +55,5 @@
 - [ ] Statistics
 
 ## Features for the future...
-- Notes on the serie / feedback if need to increase or decrease
+- Notes on the serie
 - Movements have a picture and notes
-- Handle KG and LBS

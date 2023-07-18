@@ -1,9 +1,9 @@
 <% if Exercise.where('created_at < ?', exercise.created_at).where(movement_id: exercise.movement_id).last %>
     <div class="last_performance">
-        <p>Last performance (<%= local_time_ago(Exercise.where('created_at < ?', exercise.created_at).where(movement_id: exercise.movement_id).last.created_at) %>):</p>
+        <p><%= local_time_ago(Exercise.where('created_at < ?', exercise.created_at).where(movement_id: exercise.movement_id).last.created_at) %></p>
         <ul>
             <% Serie.where(exercise_id: Exercise.where('created_at < ?', exercise.created_at).where(movement_id: exercise.movement_id).last.id).each do |last_serie| %>
-                <li><%= last_serie.weight %> kg - <%= pluralize(last_serie.repetition, 'rep')%></li>
+                <li class="small_text"><%= last_serie.weight %> kg x <%= last_serie.repetition %></li>
             <% end %>
         </ul>
     </div>
