@@ -1,7 +1,7 @@
 <%= turbo_frame_tag serie do %>
     <%= turbo_frame_tag dom_id(serie, :edit) do %>
             <div class="list_inline">
-            <p><%= serie.weight %> kg - <%= pluralize(serie.repetition, 'reps') %></p>
+            <p><%= serie.weight %> kg (total: <%= serie.total_weight%> kg) - <%= pluralize(serie.repetition, 'reps') %> </p>
             <div class="list_actions">
             <%= link_to "edit",
                             [:edit, workout, exercise, serie],

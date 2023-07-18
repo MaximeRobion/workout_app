@@ -47,6 +47,7 @@ Todo for MVP
 Tech todo
 - [] Test last performance
 - [] Test series (fixtures and system test)
+- [] Use form partial for series edit
 
 v1
 - [] "you should charge up" algorithm on last_performance: all reps > 10, and total superior from 2 last times
