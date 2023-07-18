@@ -1,7 +1,7 @@
 class Movement < ApplicationRecord
   belongs_to :user
 
-  enum equipment_type: [ :Barbell, :Dumbell, :Machine, :Cable ]
+  enum equipment_type: [:barbell, :dumbell, :machine, :cable]
 
   validates :name, presence: true, uniqueness: { case_sensitive: false }
 

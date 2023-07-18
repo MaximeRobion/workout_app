@@ -3,6 +3,10 @@
   <div class="input_group">
     <%= f.input :weight, placeholder: "Weight in kilos" %>
     <%= f.input :is_total_weight, collection: [["in total", true], ["on each side", false]] %>
+    <%= f.input :weight,
+        placeholder: "Equipment weight",
+        input_html: { value: (@exercise.movement.barbell? ? "20" : "0") }
+        %>
     <%= f.input :repetition, placeholder: "Repetitions" %>
   </div>
   <div class="btn_group_inline">

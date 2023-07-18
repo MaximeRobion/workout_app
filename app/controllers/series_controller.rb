@@ -59,7 +59,7 @@ class SeriesController < ApplicationController
 
   private
     def serie_params
-      params.require(:serie).permit(:weight, :repetition, :is_total_weight)
+      params.require(:serie).permit(:weight, :repetition, :is_total_weight, :movement_baseline_weight)
     end
 
     def set_exercise
