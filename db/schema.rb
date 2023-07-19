@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_19_075845) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_19_084431) do
   create_table "exercises", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "workout_id", null: false
     t.integer "movement_id"
     t.decimal "movement_baseline_weight", precision: 10, scale: 2, null: false
+    t.integer "unit", default: 0, null: false
     t.index ["movement_id"], name: "index_exercises_on_movement_id"
     t.index ["workout_id"], name: "index_exercises_on_workout_id"
   end

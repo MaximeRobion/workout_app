@@ -6,7 +6,7 @@
                     <h3><%= exercise.movement.name %></h3>
                     <p><%= exercise.movement.equipment_type.capitalize %>
                         <% if exercise.movement_baseline_weight.positive? %>
-                            <%= "- #{exercise.movement_baseline_weight} kg" %>
+                            <%= "- #{exercise.baseline_weight_and_unit}" %>
                         <% end %>
                     </p>
                 </div>
