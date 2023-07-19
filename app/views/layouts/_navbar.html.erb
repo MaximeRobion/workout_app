@@ -7,6 +7,7 @@
     <div class="navbar_username">
       <%= current_user.name %>
     </div>
+    <%= link_to 'edit', edit_user_registration_path, class: "material-symbols-outlined" %>
     <%= button_to "logout",
                   destroy_user_session_path,
                   method: :delete,
