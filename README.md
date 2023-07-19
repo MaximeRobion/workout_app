@@ -42,6 +42,7 @@
 - [x] Form errors handling
 - [x] "On each side" vs "Total" weight indicator ~ https://github.com/MaximeRobion/workout_app/pull/2
 - [x] Handle KG and LBS
+- [x] Have postgresql as prod db
 - [ ] SuperSets (1 exercise with 2 movements)
 - [ ] Push to prod
 
