@@ -3,7 +3,7 @@
         <p><%= local_time_ago(Exercise.where('created_at < ?', exercise.created_at).where(movement_id: exercise.movement_id).last.created_at) %></p>
         <ul>
             <% Serie.where(exercise_id: Exercise.where('created_at < ?', exercise.created_at).where(movement_id: exercise.movement_id).last.id).each do |last_serie| %>
-                <li class="small_text"><%= last_serie.weight %> kg x <%= last_serie.repetition %></li>
+                <li class="small_text"><%= last_serie.weight_in_preferred_unit %> x <%= last_serie.repetition %></li>
             <% end %>
         </ul>
     </div>

@@ -2,13 +2,12 @@
 <%= turbo_frame_tag dom_id(@serie, :edit) do %>
     <%= simple_form_for [@workout, @exercise, @serie], html: { class: "form" } do |f| %>
     <div class="input_group">
-        <%= f.input :weight, placeholder: "Weight in kilos"%>
-        <%= f.input :is_total_weight, collection: [["in total", true], ["on each side", false]] %>
-        <%= f.input :movement_baseline_weight,
-            placeholder: "Equipment weight",
-            input_html: { value: (@exercise.movement.barbell? ? "20" : "0") }
-            %>
-        <%= f.input :repetition, placeholder: "Repetitions" %>
+      <div class="weight_inputs">
+        <%= f.input :weight, placeholder: "Weight" %>
+        <%= f.input :unit, collection: Serie.units.map { |key, value| [key.humanize, key] }, include_blank: false %>
+        <%= f.input :is_total_weight, collection: [["in total", true], ["on each side", false]], include_blank: false %>
+      </div>
+      <%= f.input :repetition, placeholder: "Reps" %>
     </div>
     <div class="btn_group_inline">
         <%= link_to "Cancel", url_for(:back), class: "btn btn_light" %>
