@@ -1,6 +1,8 @@
 class Serie < ApplicationRecord
   belongs_to :exercise
 
+  enum units: [:kg, :lbs]
+
   validates :weight, presence: true
   validates :repetition, presence: true
   validates :is_total_weight, inclusion: [true, false]
