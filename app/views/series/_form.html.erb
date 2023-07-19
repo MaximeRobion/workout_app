@@ -3,7 +3,8 @@
     <div class="input_group">
       <div class="weight_inputs">
         <%= f.input :weight, placeholder: "Weight" %>
-        <%= f.input :is_total_weight, collection: [["in total", true], ["on each side", false]], include_blank: false, include_hidden: false %>
+        <%= f.input :unit, collection: Serie.units.map { |key, value| [key.humanize, key] }, include_blank: false %>
+        <%= f.input :is_total_weight, collection: [["in total", true], ["on each side", false]], include_blank: false %>
       </div>
       <%= f.input :repetition, placeholder: "Reps" %>
     </div>
