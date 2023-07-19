@@ -112,3 +112,13 @@
     flex-direction: row;
     gap: var(--space-xs);
 }
+
+form:invalid [type="submit"] {
+    pointer-events: none;
+    background-color: var(--color-background);
+    color: var(--color-text-muted);
+    background-image: none;
+    border: solid 2px transparent;
+    font-weight: bold;
+    transition: filter 400ms, color 200ms;
+  }

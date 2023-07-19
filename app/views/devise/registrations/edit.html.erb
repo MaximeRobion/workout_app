@@ -2,7 +2,7 @@
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: "form" }) do |f| %>
-  <%= f.error_notification %>
+    <%= form_error_notification(resource) %>
 
     <%= f.input :email, required: true, autofocus: true, placeholder: "Email" %>
 
@@ -23,7 +23,9 @@
     </div>
 
     <div>
-      <%= f.input :preferred_unit, collection: User.preferred_units.map { |key, value| [key.humanize, key] }, include_blank: false %>
+      <%= f.input :preferred_unit,
+                  collection: User.preferred_units.map { |key, value| [key.humanize, key] },
+                  include_blank: false %>
     </div>
 
     <%= f.input :current_password,
