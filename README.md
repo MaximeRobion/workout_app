@@ -43,18 +43,25 @@
 - [x] "On each side" vs "Total" weight indicator ~ https://github.com/MaximeRobion/workout_app/pull/2
 - [x] Handle KG and LBS
 - [x] Have postgresql as prod db
-- [ ] SuperSets (1 exercise with 2 movements)
 - [ ] Push to prod
 
 ### Tech todo
 - [ ] Test last performance
 - [ ] Test series (fixtures and system test)
 - [ ] Use form partial for series edit
+- [ ] Model test?
+- [ ] Controller test?
+- [ ] Analytics in models
+- [ ] Learn more about validations in model
 
 ## v1
 - [ ] "you should charge up" algorithm on last_performance: all reps > 10, and total superior from 2 last times
+- [ ] SuperSets
 - [ ] Statistics
-
-## Features for the future...
-- Notes on the serie
-- Movements have a picture and notes
+ - [ ] Graph
+ - [ ] PRs
+ - [ ] Number of workouts
+- [ ] Make UI pop and cleaner
+- [ ] Translations
+- [ ] Notes on the serie (or smiley or scale (easy/normal/hard))
+- [ ] Movements have a picture and notes > but needs new interaction to pick movement

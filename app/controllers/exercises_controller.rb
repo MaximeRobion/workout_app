@@ -30,9 +30,9 @@ class ExercisesController < ApplicationController
       respond_to do |format|
         format.html {
           redirect_to workout_exercise_path(@workout, @exercise),
-          notice: "Exercise was successfully created."
+          notice: t(:create_exercise_flash)
         }
-        format.turbo_stream { flash.now[:notice] = "Date was successfully created." }
+        format.turbo_stream { flash.now[:notice] = t(:create_exercise_flash) }
       end
       logger.info "Exercise ##{@exercise.id} created at #{Time.now.utc}"
     else
@@ -43,8 +43,8 @@ class ExercisesController < ApplicationController
   def destroy
     @exercise.destroy
     respond_to do |format|
-      format.html { redirect_to workout_path(@workout), notice: "Date was successfully destroyed." }
-      format.turbo_stream { flash.now[:notice] = "Date was successfully destroyed." }
+      format.html { redirect_to workout_path(@workout), notice: t(:destroy_exercise_flash) }
+      format.turbo_stream { flash.now[:notice] = t(:destroy_exercise_flash) }
     end
     logger.info "Exercise ##{@exercise.id} was deleted and now the user is going to be redirected..."
   end

@@ -1,0 +1,4 @@
+fr:
+  create_workout_flash: "Création de l'entraînement réussie."
+  update_workout_flash: "Mise à jour de l'entraînement réussie."
+  destroy_workout_flash: "Destruction de l'entraînement réussie."
