@@ -30,17 +30,17 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  create_workout_flash: "Workout successfully created."
-  update_workout_flash: "Workout successfully updated."
-  destroy_workout_flash: "Workout successfully destroyed."
+  create_workout_flash: "New workout created."
+  update_workout_flash: "Workout updated."
+  destroy_workout_flash: "Workout deleted."
 
-  create_exercise_flash: "Exercise was successfully created."
-  destroy_exercise_flash: "Exercise was successfully destroyed."
+  create_exercise_flash: "New exercise created."
+  destroy_exercise_flash: "Exercise deleted."
 
-  create_movement_flash: "Movement successfully created."
-  update_movement_flash: "Movement successfully updated."
-  destroy_movement_flash: "Movement successfully destroyed."
+  create_movement_flash: "New movement created."
+  update_movement_flash: "Movement updated."
+  destroy_movement_flash: "Movement destroyed."
 
-  create_serie_flash: "Movement successfully created."
-  update_serie_flash: "Movement successfully updated."
-  destroy_serie_flash: "Movement successfully destroyed."
+  create_serie_flash: "New serie created."
+  update_serie_flash: "Serie updated."
+  destroy_serie_flash: "Serie deleted."

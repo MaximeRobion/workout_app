@@ -1,4 +1,15 @@
 es:
-  create_workout_flash: "Entrenamiento creado con exito."
-  update_workout_flash: "Entrenamiento cambiado con exito."
-  destroy_workout_flash: "Entrenamiento destruido con exito."
+  create_workout_flash: "Nuevo entrenamiento creado."
+  update_workout_flash: "Entrenamiento actualizado."
+  destroy_workout_flash: "Entrenamiento borrado."
+
+  create_exercise_flash: "Nuevo ejercicio creado."
+  destroy_exercise_flash: "Ejecicio borrado."
+
+  create_movement_flash: "Nuevo movimiento creado."
+  update_movement_flash: "Movimiento actualizado."
+  destroy_movement_flash: "Movimiento borrado."
+
+  create_serie_flash: "Nueva serie creada."
+  update_serie_flash: "Serie actualizada."
+  destroy_serie_flash: "Serie borrada."
