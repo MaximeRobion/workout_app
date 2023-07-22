@@ -3,11 +3,31 @@ es:
   cancel_btn: "Cancelar"
   delete_confirm: "Estas seguro?"
 
-  # Time formats
+  # Time & date formats
   time:
     formats:
       long: "%A %d/%m/%Y %Hh%M"
       medium: "%A %d/%m/%Y"
+  date:
+    day_names:
+    - Lunes
+    - Martes
+    - Miércoles
+    - Jueves
+    - Viernes
+    - Sábado
+    - Domingo
+
+  # Buttons
+  helpers:
+    submit:
+      update: "Guardar cambios"
+      serie:
+        create: "Añadir serie"
+      workout:
+        create: "Añadir entrenamiento"
+      movement:
+        create: "Añadir movimiento"
 
   # Simple form
   simple_form:
@@ -23,12 +43,14 @@ es:
         note: "El enfoque de hoy"
       movement:
         name: "Ponle nombre a tu movimiento"
+      serie:
+        weight: "Peso"
+        repetition: "Reps"
     hints:
       movement:
         name: "Debe ser unico"
     prompts:
       movement:
-        ## FIXME
         equipment_type: "Elige el tipo de equipamiento"
     labels:
       workout:

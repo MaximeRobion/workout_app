@@ -2,14 +2,14 @@
   <%= form_error_notification(@serie) %>
     <div class="input_group">
       <div class="weight_inputs">
-        <%= f.input :weight, placeholder: "Weight" %>
+        <%= f.input :weight %>
         <%= f.input :unit, collection: Serie.units.map { |key, value| [key.humanize, key] }, include_blank: false %>
-        <%= f.input :is_total_weight, collection: [["in total", true], ["on each side", false]], include_blank: false %>
+        <%= f.input :is_total_weight, collection: [[t(:total), true], [t(:each_side), false]], include_blank: false %>
       </div>
-      <%= f.input :repetition, placeholder: "Reps" %>
+      <%= f.input :repetition %>
     </div>
   <div class="btn_group_inline">
-    <%= link_to "Cancel", url_for(:back), class: "btn btn_light" %>
+    <%= link_to t(:cancel_btn), url_for(:back), class: "btn btn_light" %>
     <%= f.button :submit, class: "btn btn_secondary" %>
   </div>
 <% end %>

@@ -3,3 +3,11 @@ en:
   create_serie_flash: "New serie created."
   update_serie_flash: "Serie updated."
   destroy_serie_flash: "Serie deleted."
+
+  #Views
+  no_serie: "No serie yet."
+  total: "in total"
+  each_side: "on each side"
+  edit_serie: "Edit serie"
+  new_serie: "New serie"
+  back_to_exercise: "Back to my exercise"

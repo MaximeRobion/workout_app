@@ -1,13 +1,13 @@
-<h1>Edit Workout</h1>
+<h1><% t(:edit_serie) %></h1>
 <%= turbo_frame_tag dom_id(@serie, :edit) do %>
     <%= simple_form_for [@workout, @exercise, @serie], html: { class: "form" } do |f| %>
     <div class="input_group">
       <div class="weight_inputs">
-        <%= f.input :weight, placeholder: "Weight" %>
+        <%= f.input :weight %>
         <%= f.input :unit, collection: Serie.units.map { |key, value| [key.humanize, key] }, include_blank: false %>
         <%= f.input :is_total_weight, collection: [["in total", true], ["on each side", false]], include_blank: false %>
       </div>
-      <%= f.input :repetition, placeholder: "Reps" %>
+      <%= f.input :repetition %>
     </div>
     <div class="btn_group_inline">
         <%= link_to "Cancel", url_for(:back), class: "btn btn_light" %>
