@@ -62,6 +62,6 @@
  - [ ] PRs
  - [ ] Number of workouts
 - [ ] Make UI pop and cleaner
-- [ ] Translations
+- [x] Translations
 - [ ] Notes on the serie (or smiley or scale (easy/normal/hard))
 - [ ] Movements have a picture and notes > but needs new interaction to pick movement
