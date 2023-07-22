@@ -1,0 +1,10 @@
+en:
+  # Controller
+  create_exercise_flash: "New exercise created."
+  destroy_exercise_flash: "Exercise deleted."
+  # View
+  no_exercise: "No exercise yet."
+  new_serie: "Add serie"
+  add_new_movement: "Add a new movement"
+  movement_not_found: "Don't find the movement you're looking for?"
+  new_exercise: "New exercise"

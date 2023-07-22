@@ -9,22 +9,10 @@
         <div>
             <%= link_to "delete",
                 workout_exercise_path(@exercise.workout_id, @exercise.id),
-                data: {turbo_method: :delete,turbo_confirm: "Are you sure?"},
+                data: {turbo_method: :delete, turbo_confirm: t('delete_confirm')},
                 class: "material-symbols-outlined"%>
         </div>
     </div>
-
-    <% if @previous_exercise_same_movement %>
-        <div class="workout">
-        <p>Last performance (<%= local_time_ago(@previous_exercise_same_movement.created_at) %>):</p>
-        <div class="workout_note">
-            <% @last_series.each do |last_serie| %>
-                <p><%= last_serie.weight %> kg - <%= pluralize(last_serie.repetition, 'rep')%></p>
-            <% end %>
-        </div>
-
-        </div>
-    <% end %>
 
     <% @series.each do |serie| %>
         <div class="list_inline">
@@ -35,7 +23,7 @@
                     workout_exercise_series_path(@exercise.workout_id, serie.exercise_id, serie),
                     data: {
                         turbo_method: :delete,
-                        turbo_confirm: "Are you sure?"
+                        turbo_confirm: t('delete_confirm')
                     },
                     class: "material-symbols-outlined" %>
             </div>

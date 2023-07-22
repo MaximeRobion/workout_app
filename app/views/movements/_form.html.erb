@@ -1,9 +1,9 @@
 <%= simple_form_for @movement, html: { class: "form" } do |f| %>
     <%= form_error_notification(@movement) %>
-    <%= f.input :name, placeholder: "Name your movement", hint: "Need to be unique" %>
-    <%= f.input :equipment_type, collection: Movement.equipment_types.map { |key, value| [key.humanize, key] }%>
+    <%= f.input :name %>
+    <%= f.input :equipment_type, collection: Movement.equipment_types.map { |key, value| [key.humanize, key] }, prompt: :translate %>
     <div class="btn_group_inline">
-        <%= link_to "Cancel", movements_path, class: "btn btn_light" %>
+        <%= link_to t(:cancel_btn), movements_path, class: "btn btn_light" %>
         <%= f.button :submit, class: "btn btn_secondary" %>
     </div>
 <% end %>

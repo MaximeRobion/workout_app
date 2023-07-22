@@ -20,8 +20,8 @@ class WorkoutsController < ApplicationController
 
     if @workout.save
       respond_to do |format|
-        format.html {redirect_to @workout, notice: "Workout was successfully created." }
-        format.turbo_stream { flash.now[:notice] = "Workout was successfully created." }
+        format.html {redirect_to @workout, notice: t(:create_workout_flash) }
+        format.turbo_stream { flash.now[:notice] = t(:create_workout_flash) }
       end
     else
       render :new, status: :unprocessable_entity
@@ -35,8 +35,8 @@ class WorkoutsController < ApplicationController
 
     if @workout.update(workout_params)
       respond_to do |format|
-        format.html { redirect_to @workout, notice: "Workout was successfully updated." }
-        format.turbo_stream { flash.now[:notice] = "Workout was successfully updated." }
+        format.html { redirect_to @workout, notice: t(:update_workout_flash) }
+        format.turbo_stream { flash.now[:notice] = t(:update_workout_flash) }
       end
     else
       render :edit, status: :unprocessable_entity
@@ -47,8 +47,8 @@ class WorkoutsController < ApplicationController
     @workout.destroy
 
     respond_to do |format|
-      format.html { redirect_to root_path, notice: "Workout was successfully destroyed." }
-      format.turbo_stream {flash.now[:notice] = "Workout was successfully destroyed."}
+      format.html { redirect_to root_path, notice: t(:destroy_workout_flash) }
+      format.turbo_stream {flash.now[:notice] = t(:destroy_workout_flash)}
     end
   end
 

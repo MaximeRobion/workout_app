@@ -1,7 +1,7 @@
 <%= turbo_stream_from current_user, "workouts" %>
 <main class="container">
     <div class="header">
-        <h1>Workouts</h1>
+        <h1><%= t :workouts %></h1>
     </div>
 
     <%= turbo_frame_tag Workout.new %>
@@ -12,7 +12,7 @@
     <% end %>
 </main>
 <footer class="footer">
-        <%= link_to "New workout",
+        <%= link_to t('new_workout'),
             new_workout_path,
             class: "btn btn_primary",
             data: { turbo_frame: dom_id(Workout.new) }

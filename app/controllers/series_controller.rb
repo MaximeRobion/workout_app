@@ -21,9 +21,9 @@ class SeriesController < ApplicationController
       respond_to do |format|
         format.html {
           redirect_to workout_exercise_path(@workout,@exercise),
-          notice: "Serie was successfully created."
+          notice: t(:create_serie_flash)
         }
-        format.turbo_stream { flash.now[:notice] = "Date was successfully created." }
+        format.turbo_stream { flash.now[:notice] = t(:create_serie_flash) }
       end
     else
       render :new, status: :unprocessable_entity
@@ -40,8 +40,8 @@ class SeriesController < ApplicationController
   def update
     if @serie.update(serie_params)
       respond_to do |format|
-        format.html {redirect_to workout_exercise_path(@workout, @exercise),notice: "Serie was successfully updated."}
-        format.turbo_stream { flash.now[:notice] = "Serie was successfully created." }
+        format.html {redirect_to workout_exercise_path(@workout, @exercise), notice: t(:update_serie_flash)}
+        format.turbo_stream { flash.now[:notice] = t(:update_serie_flash) }
       end
     else
       render :edit, status: :unprocessable_entity
@@ -51,8 +51,8 @@ class SeriesController < ApplicationController
   def destroy
     @serie.destroy
     respond_to do |format|
-      format.html { redirect_to workout_exercise_path(@workout,@exercise), notice: "Serie was successfully destroyed." }
-      format.turbo_stream {flash.now[:notice] = "Serie was successfully destroyed."}
+      format.html { redirect_to workout_exercise_path(@workout,@exercise), notice: t(:destroy_serie_flash) }
+      format.turbo_stream {flash.now[:notice] = t(:destroy_serie_flash)}
     end
     logger.info "Serie ##{@serie.id}) deleted at #{Time.now.utc}"
   end

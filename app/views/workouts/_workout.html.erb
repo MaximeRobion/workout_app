@@ -1,14 +1,14 @@
 <%= turbo_frame_tag workout do %>
     <div class="list_inline">
         <%= link_to (workout), data: { turbo_frame: "_top" } do %>
-            <%= local_time(workout.date, format: '%A %d/%m/%Y')%>
-            <p class="list_note"><%= workout.note%></p>
+            <%= l(workout.date, format: :medium )%>
+            <p class="list_note"><%= workout.note %></p>
         <% end %>
         <%= link_to "delete",
                 workout_path(workout),
                 data: {
                         turbo_method: :delete,
-                        turbo_confirm: "Are you sure?"},
+                        turbo_confirm: t('delete_confirm')},
                 class: "material-symbols-outlined list_actions"%>
     </div>
 <% end %>

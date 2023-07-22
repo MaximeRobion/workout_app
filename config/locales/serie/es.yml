@@ -1,0 +1,12 @@
+es:
+  # Controller
+  create_serie_flash: "Nueva serie creada."
+  update_serie_flash: "Serie actualizada."
+  destroy_serie_flash: "Serie borrada."
+  #Views
+  no_serie: "No serie todavia."
+  total: "en total"
+  each_side: "de cada lado"
+  edit_serie: "Editar serie"
+  new_serie: "Añadir serie"
+  back_to_exercise: "Patras por mi ejercicio"

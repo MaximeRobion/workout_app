@@ -15,7 +15,7 @@
                             [workout, exercise],
                             data: {
                                 turbo_method: :delete,
-                                turbo_confirm: "Are you sure?"
+                                turbo_confirm: t('delete_confirm')
                             },
                             class: "material-symbols-outlined" %>
                 <% end %>
@@ -29,7 +29,7 @@
             </div>
 
             <%= turbo_frame_tag nested_dom_id(exercise, Serie.new) %>
-            <%= link_to "Add serie",
+            <%= link_to t(:new_serie),
                             [:new, workout, exercise, :series],
                             data: { turbo_frame: nested_dom_id(exercise, Serie.new) },
                             class: "btn btn_light" %>

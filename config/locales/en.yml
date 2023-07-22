@@ -30,4 +30,62 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  # Here otherwise the system shuts-off
+  hello_world: "Hello world"
+
+  # Actions
+  cancel_btn: "Cancel"
+  delete_confirm: "Are you sure?"
+
+  # Time forward
+  time:
+    formats:
+      long: "%A %d/%m/%Y %Hh%M"
+      medium: "%A %d/%m/%Y"
+      default: "%d/%m/%Y"
+
+  # Buttons
+  helpers:
+    submit:
+      update: "Save changes"
+      serie:
+        create: "Add serie"
+      workout:
+        create: "Add workout"
+      movement:
+        create: "Add movement"
+      exercise:
+        create: "Add exercise"
+
+  # Simple form
+  simple_form:
+    "yes": 'Yes'
+    "no": 'No'
+    required:
+      text: 'required'
+      mark: '*'
+    error_notification:
+      default_message: "Please review the problems below:"
+    placeholders:
+      workout:
+        note: "Today's focus"
+      movement:
+        name: "Name your movement"
+      serie:
+        weight: "Weight"
+        repetition: "Reps"
+      exercise:
+        movement_baseline_weight: "Baseline weight"
+    hints:
+      movement:
+        name: "Needs to be unique"
+    prompts:
+      movement:
+        equipment_type: "Select the type of equipment"
+      exercise:
+        movement_id: "Pick a movement"
+    labels:
+      workout:
+        date: "Date"
+
+

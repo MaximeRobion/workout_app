@@ -1,16 +1,16 @@
 <%= simple_form_for [ @workout, @workout.exercises.build ], html: { class: "form" } do |f| %>
   <%= form_error_notification(@exercise) %>
   <div class="input_group">
-    <%= f.input :movement_id, collection: Movement.all.map { |m| [m.name, m.id] }%>
+    <%= f.input :movement_id, collection: Movement.all.map { |m| [m.name, m.id] }, prompt: :translate %>
     <div class="weight_inputs">
-      <%= f.input :movement_baseline_weight, placeholder: "Baseline weight" %>
+      <%= f.input :movement_baseline_weight %>
       <%= f.input :unit, collection: Exercise.units.map { |key, value| [key.humanize, key] }, include_blank: false %>
     </div>
   </div>
   <div class="btn_group_inline">
-    <%= link_to "Cancel", url_for(:back), class: "btn btn_light" %>
+    <%= link_to t(:cancel_btn), url_for(:back), class: "btn btn_light" %>
     <%= f.button :submit, class: "btn btn_secondary" %>
   </div>
 
-  <p>Don't find the movement you're looking for? <%= link_to "Add a new movement", movements_path, data: {turbo: false} %></p>
+  <p><%= t(:movement_not_found) %> <%= link_to t(:add_new_movement), movements_path, data: {turbo: false} %></p>
 <% end %>

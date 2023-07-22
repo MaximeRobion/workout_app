@@ -1,0 +1,100 @@
+es:
+  # Actions
+  cancel_btn: "Cancelar"
+  delete_confirm: "Estas seguro?"
+
+  # Time & date formats
+  time:
+    formats:
+      long: "%A %d/%m/%Y %Hh%M"
+      medium: "%A %d/%m/%Y"
+      default: "%d/%m/%Y"
+  date:
+    day_names:
+    - Lunes
+    - Martes
+    - Miércoles
+    - Jueves
+    - Viernes
+    - Sábado
+    - Domingo
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: alrededor de 1 hora
+        other: alrededor de %{count} horas
+      about_x_months:
+        one: alrededor de 1 mes
+        other: alrededor de %{count} meses
+      about_x_years:
+        one: alrededor de 1 año
+        other: alrededor de %{count} años
+      almost_x_years:
+        one: casi 1 año
+        other: casi %{count} años
+      half_a_minute: medio minuto
+      less_than_x_minutes:
+        one: menos de 1 minuto
+        other: menos de %{count} minutos
+      less_than_x_seconds:
+        one: menos de 1 segundo
+        other: menos de %{count} segundos
+      over_x_years:
+        one: más de 1 año
+        other: más de %{count} años
+      x_days:
+        one: 1 día
+        other: "%{count} días"
+      x_minutes:
+        one: 1 minuto
+        other: "%{count} minutos"
+      x_months:
+        one: 1 mes
+        other: "%{count} meses"
+      x_seconds:
+        one: 1 segundo
+        other: "%{count} segundos"
+
+  # Buttons
+  helpers:
+    submit:
+      update: "Guardar cambios"
+      serie:
+        create: "Añadir serie"
+      workout:
+        create: "Añadir entrenamiento"
+      movement:
+        create: "Añadir movimiento"
+      exercise:
+        create: "Añadir ejercicio"
+
+  # Simple form
+  simple_form:
+    "yes": 'Si'
+    "no": 'No'
+    required:
+      text: 'obligatorio'
+      mark: '*'
+    error_notification:
+      default_message: "Por favor revise los problemas a continuación:"
+    placeholders:
+      workout:
+        note: "El enfoque de hoy"
+      movement:
+        name: "Ponle nombre a tu movimiento"
+      serie:
+        weight: "Peso"
+        repetition: "Reps"
+      exercise:
+        movement_baseline_weight: "Peso de base"
+    hints:
+      movement:
+        name: "Debe ser unico"
+    prompts:
+      movement:
+        equipment_type: "Elige el tipo de equipamiento"
+      exercise:
+        movement_id: "Elige un movimiento"
+    labels:
+      workout:
+        date: "Fecha"

@@ -17,9 +17,9 @@ class MovementsController < ApplicationController
       respond_to do |format|
         format.html {
           redirect_to :action => 'index',
-          notice: "Movement was successfully created."
+          notice: t(:create_movement_flash)
         }
-        format.turbo_stream { flash.now[:notice] = "Movement was successfully created." }
+        format.turbo_stream { flash.now[:notice] = t(:create_movement_flash) }
       end
     else
       render :new, status: :unprocessable_entity
@@ -34,9 +34,9 @@ class MovementsController < ApplicationController
       respond_to do |format|
         format.html {
           redirect_to new_movement_path,
-          notice: "Movement was successfully updated."
+          notice: t(:update_movement_flash)
         }
-        format.turbo_stream { flash.now[:notice] = "Movemenent was successfully updated." }
+        format.turbo_stream { flash.now[:notice] = t(:update_movement_flash) }
       end
     else
       render :edit, status: :unprocessable_entity
@@ -46,8 +46,8 @@ class MovementsController < ApplicationController
   def destroy
     @movement.destroy
     respond_to do |format|
-      format.html { redirect_to movements_path, notice: "Movement was successfully destroyed." }
-      format.turbo_stream {flash.now[:notice] = "Movement was successfully destroyed."}
+      format.html { redirect_to movements_path, notice: t(:destroy_movement_flash) }
+      format.turbo_stream {flash.now[:notice] = t(:destroy_movement_flash)}
     end
   end
 
