@@ -43,7 +43,7 @@
 - [x] "On each side" vs "Total" weight indicator ~ https://github.com/MaximeRobion/workout_app/pull/2
 - [x] Handle KG and LBS
 - [x] Have postgresql as prod db
-- [ ] Push to prod
+- [x] Push to prod
 
 ### Tech todo
 - [ ] Test last performance
