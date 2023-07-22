@@ -2,6 +2,6 @@
     <p><%= movement.name %> (<%= movement.equipment_type %>)</p>
     <div class="list_actions">
         <%= link_to "edit", edit_movement_path(movement), class: "material-symbols-outlined" %>
-        <%= link_to "delete", movement_path(movement), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "material-symbols-outlined" %>
+        <%= link_to "delete", movement_path(movement), data: { turbo_method: :delete, turbo_confirm: t('delete_confirm') }, class: "material-symbols-outlined" %>
     </div>
 <% end %>

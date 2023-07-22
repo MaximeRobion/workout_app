@@ -75,6 +75,7 @@
     border-bottom: var(--border);
     margin-bottom: var(--space-s);
     padding-bottom: var(--space-s);
+    align-items:center;
 }
 
 .last_performance ul li {
@@ -92,3 +93,15 @@ label {
     font-size: var(--font-size-s);
     color: var(--color-header);
 }
+
+.time_ago {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+}
+
+.time_ago .material-symbols-outlined {
+    cursor: default;
+}
+

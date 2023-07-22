@@ -42,6 +42,7 @@ en:
     formats:
       long: "%A %d/%m/%Y %Hh%M"
       medium: "%A %d/%m/%Y"
+      default: "%d/%m/%Y"
 
   # Buttons
   helpers:
@@ -53,6 +54,8 @@ en:
         create: "Add workout"
       movement:
         create: "Add movement"
+      exercise:
+        create: "Add exercise"
 
   # Simple form
   simple_form:
@@ -71,12 +74,16 @@ en:
       serie:
         weight: "Weight"
         repetition: "Reps"
+      exercise:
+        movement_baseline_weight: "Baseline weight"
     hints:
       movement:
         name: "Needs to be unique"
     prompts:
       movement:
         equipment_type: "Select the type of equipment"
+      exercise:
+        movement_id: "Pick a movement"
     labels:
       workout:
         date: "Date"

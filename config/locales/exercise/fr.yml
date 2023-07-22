@@ -2,3 +2,10 @@ fr:
   # Controller
   create_exercise_flash: "Nouvel exercice crée."
   destroy_exercise_flash: "Exercise effacé."
+  # View
+  no_exercise: "Pas encore d'exercice."
+  new_serie: "Ajouter une série"
+  add_new_movement: "Ajouter un nouveau mouvement"
+  movement_not_found: "Vous ne trouver pas le mouvement que vous cherchez ?"
+  new_exercise: "Nouvel exercise"
+  last_performance: "Il y a %{time_ago}"

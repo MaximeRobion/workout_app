@@ -1,8 +1,8 @@
 <header class="navbar">
   <% if user_signed_in? %>
     <ul class="navbar_nav">
-        <li><%= link_to "Workouts", workouts_path %></li>
-        <li><%= link_to "Movements", movements_path %></li>
+        <li><%= link_to t(:navbar_workout), workouts_path %></li>
+        <li><%= link_to t(:navbar_movement), movements_path %></li>
     </ul>
     <div class="navbar_username">
       <%= current_user.name %>
@@ -13,7 +13,7 @@
                   method: :delete,
                   class: "material-symbols-outlined" %>
   <% else %>
-    <%= link_to "Sign in",
+    <%= link_to t(:sign_in),
                 new_user_session_path,
                 class: "btn btn_dark navbar_right" %>
   <% end %>
