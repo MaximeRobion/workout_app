@@ -11,11 +11,14 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_07_19_085049) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "exercises", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "workout_id", null: false
-    t.integer "movement_id"
+    t.bigint "workout_id", null: false
+    t.bigint "movement_id"
     t.decimal "movement_baseline_weight", precision: 10, scale: 2, null: false
     t.integer "unit", default: 0, null: false
     t.index ["movement_id"], name: "index_exercises_on_movement_id"
@@ -26,7 +29,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_19_085049) do
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.integer "equipment_type"
     t.index ["name"], name: "index_movements_on_name", unique: true
     t.index ["user_id"], name: "index_movements_on_user_id"
@@ -35,7 +38,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_19_085049) do
   create_table "series", force: :cascade do |t|
     t.decimal "weight", precision: 10, scale: 2, null: false
     t.integer "repetition", null: false
-    t.integer "exercise_id", null: false
+    t.bigint "exercise_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "is_total_weight", default: false, null: false
@@ -61,7 +64,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_19_085049) do
     t.text "note"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.index ["user_id"], name: "index_workouts_on_user_id"
   end
 
