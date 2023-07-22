@@ -1,0 +1,4 @@
+es:
+  # Controller
+  create_exercise_flash: "Nuevo ejercicio creado."
+  destroy_exercise_flash: "Ejecicio borrado."

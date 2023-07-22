@@ -30,17 +30,15 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  create_workout_flash: "New workout created."
-  update_workout_flash: "Workout updated."
-  destroy_workout_flash: "Workout deleted."
+  # Here otherwise the system shuts-off
+  hello_world: "Hello world"
 
-  create_exercise_flash: "New exercise created."
-  destroy_exercise_flash: "Exercise deleted."
+  # Actions
+  cancel_btn: "Cancel"
+  delete_confirm: "Are you sure?"
 
-  create_movement_flash: "New movement created."
-  update_movement_flash: "Movement updated."
-  destroy_movement_flash: "Movement destroyed."
-
-  create_serie_flash: "New serie created."
-  update_serie_flash: "Serie updated."
-  destroy_serie_flash: "Serie deleted."
+  # Time forward
+  time:
+    formats:
+      long: "%A %d/%m/%Y %Hh%M"
+      medium: "%A %d/%m/%Y"

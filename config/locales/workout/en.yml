@@ -1,0 +1,13 @@
+en:
+  # Controller
+  create_movement_flash: "New movement created."
+  update_movement_flash: "Movement updated."
+  destroy_movement_flash: "Movement destroyed."
+
+  # Views
+  no_workout: "No workout yet."
+  edit_workout: "Edit workout"
+  new_workout: "New workout"
+  workouts: "Workouts"
+  new_exercise: "New exercise"
+

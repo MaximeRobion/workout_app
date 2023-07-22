@@ -1,0 +1,5 @@
+fr:
+  # Controller
+  create_movement_flash: "Nouveau mouvement crée."
+  update_movement_flash: "Mouvement mis à jour."
+  destroy_movement_flash: "Mouvement effacé."

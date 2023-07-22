@@ -1,0 +1,12 @@
+fr:
+  # Controller
+  create_workout_flash: "Nouvel entraînement crée."
+  update_workout_flash: "Entrainement mise à jour."
+  destroy_workout_flash: "Entrainement effacé."
+
+  # Views
+  no_workout: "Pas encore d'entrainement."
+  edit_workout: "Modifier l'entrainement"
+  new_workout: "Nouvel entrainement"
+  workouts: "Entrenainements"
+  new_exercise: "Nouvel exercice"

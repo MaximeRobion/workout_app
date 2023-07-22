@@ -1,6 +1,6 @@
 <div class="header">
     <div>
-        <h1><%= local_time(@workout.date, format: '%A %d/%m/%Y %Hh%M') %></h1>
+        <h1><%= l(@workout.date, format: :long) %></h1>
         <p><%= @workout.note %></p>
     </div>
     <div>

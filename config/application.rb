@@ -19,6 +19,8 @@ module WorkoutApp
     config.time_zone = "Europe/Madrid"
     # config.eager_load_paths << Rails.root.join("extras")
 
+    # All translations from config/locales/*.rb,yml are auto loaded.
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
     # Permitted locales available for the application
     I18n.available_locales = [:en, :es, :fr]
     # Set default locale to something other than :en

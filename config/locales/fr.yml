@@ -1,15 +1,10 @@
 fr:
-  create_workout_flash: "Nouvel entraînement crée."
-  update_workout_flash: "Entrainement mise à jour."
-  destroy_workout_flash: "Entrainement effacé."
+  # Actions
+  cancel_btn: "Annuler"
+  delete_confirm: "Etes vous sure?"
 
-  create_exercise_flash: "Nouvel exercice crée."
-  destroy_exercise_flash: "Exercise effacé."
-
-  create_movement_flash: "Nouveau mouvement crée."
-  update_movement_flash: "Mouvement mis à jour."
-  destroy_movement_flash: "Mouvement effacé."
-
-  create_serie_flash: "Nouvelle serie crée."
-  update_serie_flash: "Série mis à jour."
-  destroy_serie_flash: "Série effacé."
+  # Time formats
+  time:
+    formats:
+      long: "%A %d/%m/%Y %Hh%M"
+      medium: "%A %d/%m/%Y"

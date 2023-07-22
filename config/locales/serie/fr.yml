@@ -1,0 +1,5 @@
+fr:
+  # Controller
+  create_serie_flash: "Nouvelle serie crée."
+  update_serie_flash: "Série mis à jour."
+  destroy_serie_flash: "Série effacé."
