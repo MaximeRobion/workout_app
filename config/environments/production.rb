@@ -5,16 +5,6 @@ Rails.application.configure do
 
   # Code is not reloaded between requests.
   config.cache_classes = true
-  # config.active_storage.service = :digitalocean
-  # config.active_storage.variant_processor = :minimagick
-
-  # host = ENV['DEFAULT_URL_HOST'] || "#{ENV['HEROKU_APP_NAME']}.herokuapp.com"
-  # protocol = config.force_ssl ? 'https' : 'http'
-
-  # config.action_controller.default_url_options = {
-  #     host: host
-  #     protocol: protocol
-  # }
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
