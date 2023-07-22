@@ -3,7 +3,7 @@
 <header>
     <div class="header">
         <div class="header_heading">
-            <h1>Movements</h1>
+            <h1><%= t :movements %></h1>
         </div>
     </div>
 
@@ -15,7 +15,7 @@
 
 </main>
 <footer class="footer">
-        <%= link_to "New movement",
+        <%= link_to t(:new_movement),
             new_movement_path,
             class: "btn btn_primary",
             data: { turbo_frame: dom_id(Movement.new) }

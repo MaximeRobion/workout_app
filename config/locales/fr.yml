@@ -8,3 +8,28 @@ fr:
     formats:
       long: "%A %d/%m/%Y %Hh%M"
       medium: "%A %d/%m/%Y"
+
+  # Simple form
+  simple_form:
+    "yes": 'Oui'
+    "no": 'Non'
+    required:
+      text: 'requis'
+      mark: '*'
+    error_notification:
+      default_message: "Veuillez examiner les problèmes ci-dessous :"
+    placeholders:
+      workout:
+        note: "Theme de l'entrainement"
+      movement:
+        name: "Nommez votre mouvement"
+    hints:
+      movement:
+        name: "Dois être unique"
+    prompts:
+      movement:
+        ## FIXME
+        equipment_type: "Sélectionnez le type d'équipement"
+    labels:
+      workout:
+        date: "Date"

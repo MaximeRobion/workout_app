@@ -5,5 +5,7 @@ en:
   destroy_workout_flash: "Workout deleted."
 
   # Views
-  no_workout: "No workout yet."
+  edit_movement: "Edit movement"
+  movements: "Movements"
+  new_movement: "New movement"
 

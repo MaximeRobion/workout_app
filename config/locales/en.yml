@@ -42,3 +42,28 @@ en:
     formats:
       long: "%A %d/%m/%Y %Hh%M"
       medium: "%A %d/%m/%Y"
+
+  # Simple form
+  simple_form:
+    "yes": 'Yes'
+    "no": 'No'
+    required:
+      text: 'required'
+      mark: '*'
+    error_notification:
+      default_message: "Please review the problems below:"
+    placeholders:
+      workout:
+        note: "Today's focus"
+      movement:
+        name: "Name your movement"
+    hints:
+      movement:
+        name: "Needs to be unique"
+    prompts:
+      movement:
+        ## FIXME
+        equipment_type: "Select the type of equipment"
+    labels:
+      workout:
+        date: "Date"

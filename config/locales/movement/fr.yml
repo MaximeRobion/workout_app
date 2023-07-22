@@ -3,3 +3,8 @@ fr:
   create_movement_flash: "Nouveau mouvement crée."
   update_movement_flash: "Mouvement mis à jour."
   destroy_movement_flash: "Mouvement effacé."
+
+  #View
+  edit_movement: "Modifier le mouvement"
+  movements: "Mouvements"
+  new_movement: "Nouveau mouvement"
